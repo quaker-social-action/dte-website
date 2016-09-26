@@ -1,54 +1,27 @@
-var gulp         = require('gulp');
-var browserSync  = require('browser-sync');
-var filter       = require('gulp-filter');
-var sass         = require('gulp-ruby-sass');
-var sourcemaps   = require('gulp-sourcemaps');
-var reload       = browserSync.reload;
+var gulp        = require('gulp');
+var sourcemaps  = require('gulp-sourcemaps');
+var browserSync = require('browser-sync').create();
+var sass        = require('gulp-sass');
 
-var src = {
-    scss: './public/scss/*.scss',
-    css:  './public/css',
-    html: './public/*.html'
-};
-
-/**
- * Kick off the sass stream with source maps + error handling
- */
-function sassStream () {
-    return sass('public/scss', {sourcemap: true})
-        .on('error', function (err) {
-            console.error('Error!', err.message);
-        })
-        .pipe(sourcemaps.write('./', {
-            includeContent: false,
-            sourceRoot: '/public/scss'
-        }));
-}
-
-/**
- * Start the Browsersync Static Server + Watch files
- */
+// Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
 
-    browserSync({
-        server: "./public"
-    });
+  browserSync.init({
+    server: "./public"
+  });
 
-    gulp.watch(src.scss, ['sass']);
-    gulp.watch(src.html).on('change', reload);
+  gulp.watch("public/scss/*.scss", ['sass']);
+  gulp.watch("public/*.html").on('change', browserSync.reload);
 });
 
-/**
- * Compile sass, filter the results, inject CSS into all browsers
- */
+// Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return sassStream()
-        .pipe(gulp.dest(src.css))
-        .pipe(filter("**/*.css"))
-        .pipe(reload({stream: true}));
+  return gulp.src("public/scss/*.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("public/css"))
+    .pipe(browserSync.stream());
 });
 
-/**
- * Default task
- */
 gulp.task('default', ['serve']);
