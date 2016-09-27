@@ -1,0 +1,51 @@
+.info-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+}
+
+.options-half {
+  position: absolute;
+  top: 0;
+  background-color: #F5EAF5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 100px;
+  align-items: center;
+
+  h4 {
+    margin-top: 1em;
+  }
+}
+
+.option-round-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 50vh;
+  text-align: center;
+  margin: 1em;
+}
+
+.option-round {
+  background-color: #A24662;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.option-text {
+  margin-top: 1em;
+  font-weight: 300;
+}

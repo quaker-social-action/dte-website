@@ -5,15 +5,25 @@
   height: 70px;
 }
 
+.header-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  height: 70px;
+  width: 70px;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
-  height: 70px;
+  height: 20px;
   width: 300px;
   right: 1em;
   position: absolute;
+  top: 15px;
 }
 
 .fixed-header-links {
@@ -23,23 +33,62 @@
   padding-right: 30px;
 }
 
-#landingpage {
-  background: rgba(191,147,204,0.35);
-  height: 100%;
+.background-filter {
+  height: 100vh;
+  width: 100vw;
+}
+
+#landingpage-background {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#landingpage-first-half {
+
+  z-index: 99;
+  height: 60vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.background-filter {
-  background-image: url("../../assets/background/tree-943247_1920.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+#landingpage-second-half {
+  background-color: white;
+  height: 40vh;
+  width: 100vw;
+  text-align: center;
+}
+
+
+.text-half {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-weight: 300;
+
+    h1 {
+      font-weight: 200;
+      font-size: 2em;
+    }
 }
 
 .landing-info {
+  margin-top: 2em;
   height: 100vh;
   width: 70vw;
   display: flex;
@@ -49,31 +98,15 @@
   text-align: center;
 }
 
-.landing-img {
-  margin-bottom: 0.5em;
-  margin-top: 150px;
-  height: 200px;
-  width: 200px;
-}
-
 .landing-text {
   margin: 0.5em;
   color: white;
   font-size: 3em;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .landing-paragraph {
+  font-style: italic;
   color: white;
   margin-top: 0.5em;
   margin-bottom: 4em;
-}
-
-.info-page {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }

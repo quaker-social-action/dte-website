@@ -1,0 +1,41 @@
+.hdi-work {
+  height: 100vh;
+  width: 100vw;
+  background-color: #F5EAF5;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+}
+
+.hdi-card-wrapper {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.hdi-number {
+  width: 2em;
+  font-size: 2em;
+  font-weight: bolder;
+  border-bottom: 4px solid #E0793E;
+  margin-bottom: 0.5em;
+}
+
+.hdi-card {
+  margin-bottom: 1em;
+  padding: 20px;
+  border-bottom: 3px solid #7B34A2;
+  display: flex;
+  flex-flow: column;
+  justify-content:flex-start;
+  align-items: flex-start;
+  width: 37vw;
+  height: 250px;
+}
