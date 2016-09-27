@@ -4,3 +4,44 @@
 @import './partials/_option';
 @import './partials/_result';
 @import './partials/_bare';
+@import './partials/_extraOption';
+
+body {
+    margin: 0;
+}
+
+#extraOptionPage {
+    background-color: #FFFFFF;
+}
+
+.optionElement {
+    background-color: #6024A6;
+    flex-grow: 1;
+    height: 250px;
+    margin-top: 5vw;
+}
+
+.middle {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.optionContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+}
+
+@media (max-width: 600px) {
+  .optionContainer {
+    flex-direction: column;
+  }
+
+  .middle {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
