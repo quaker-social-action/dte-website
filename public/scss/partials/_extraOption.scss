@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+}
+
+#extraOptionPage {
+    background-color: #FFFFFF;
+}
+
+.optionElement {
+    background-color: #6F2CA2;
+    flex-grow: 1;
+    height: 200px;
+    margin-top: 5vw;
+}
+
+.middle {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.optionContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    position: absolute;
+    top: 30vh;
+    left: 20vw;
+}
+
+.optionContainer2 {
+    top: 60vh;
+}
+
+.optionContainer3 {
+    top: 60vh;
+}
+
+.optionContainer4 {
+    top: 90vh;
+}
+
+#orderSheet {
+    background-image: url("../assets/purple_icons/order_sheets_icon.png");
+}
+
+#flowersIcon {
+    background-image: url("../assets/purple_icons/Flowers_icon.png");
+}
+
+#funeralIcon {
+    background-image: url("../assets/purple_icons/funeral_icon.png");
+}
+
+#venueIcon {
+    background-image: url("../assets/purple_icons/Venue_icon.png");
+}
+#cateringIcon {
+    background-image: url("../assets/purple_icons/Catering_icon.png");
+}
+#limoIcon {
+    background-image: url("../assets/purple_icons/Limo_icon.png");
+}
+
+.imageIcon {
+    height: 150px;
+    margin: auto;
+    margin-top: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+.caption {
+    font-size: 30px;
+    flex-grow: 1;
+    color: #4D4D4D;
+    text-align: left;
+    padding-left: 30px;
+    width: 30%;
+    height: 60px;
+    border-bottom: 4px solid #E67842;
+}
+
+#addMore {
+    color: #4D4D4D;
+    position: absolute;
+    right: 10vw;
+    top: 10vh;
+    width: 30vw;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+#whatMore {
+    color: #4D4D4D;
+    position: absolute;
+    font-weight: 500;
+    left: 10vw;
+    top: 10vh;
+    width: 40vw;
+    font-size: 70px;
+    line-height: 70px;
+}
+
+@media (max-width: 700px) {
+  .optionContainer {
+    flex-direction: column;
+  }
+
+  .middle {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
