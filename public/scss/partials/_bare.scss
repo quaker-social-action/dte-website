@@ -1,0 +1,58 @@
+.bare__header {
+  max-width: 80%;
+  width: 100%;
+  margin: 2em auto 0;
+}
+
+.bare__title {
+  color: #666;
+  text-transform: uppercase;
+
+  & strong {
+    font-weight: normal;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .bare__title {
+    display: inline-block;
+    font-size: 4em;
+    line-height: .75em;
+    width: 560px;
+
+    & strong {
+      display: block;
+    }
+  }
+
+  .bare__subtitle {
+    float: right;
+    font-size: 1.5em;
+    width: 440px;
+  }
+}
+
+.bare__descriptions {
+  background-color: rgb(250, 246, 250);
+  padding: 2em 0 4em;
+  border-bottom: 8px solid rgb(169, 73, 100);
+}
+
+.bare__description {
+  font-size: .8em;
+  padding: 2.5em;
+  border-bottom: 4px solid rgb(228, 96, 0);
+}
+
+
+@media screen and (min-width: 64em) {
+  .bare__descriptions {
+    margin-top: 100px;
+  }
+
+  .bare__description {
+    margin: 0 1em;
+    width: calc(33.3% - 2em);
+  }
+}
+
