@@ -40,7 +40,7 @@ $(document).ready(function() {
     };
 
     $('#fullpage').fullpage({
-      anchors:['landing', 'info', 'option1', 'option2', 'option3'],
+      anchors:['landing', 'info', 'option1', 'option2', 'option3', 'option4','option5'],
       onLeave: function(index, nextIndex, direction) {
 
         if(index == 1 && direction =='down') {
