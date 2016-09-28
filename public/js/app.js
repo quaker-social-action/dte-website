@@ -34,17 +34,21 @@ var granimInstance = new Granim({
 });
 
 $(document).ready(function() {
+    var isMobile = function(){
+      var width = document.body.scrollWidth;
+      return width < 600;
+    };
 
-  $('#fullpage').fullpage({
+    $('#fullpage').fullpage({
+      anchors:['landing', 'info', 'option1', 'option2', 'option3'],
+      onLeave: function(index, nextIndex, direction) {
 
-    anchors:['landing', 'options', 'option1', 'option2', 'option3', 'final'],
-    onLeave: function(index, nextIndex, direction) {
-
-      if(index == 1 && direction =='down') {
-        TweenMax.to('.fixed-header-links', 0.5, {css:{color: 'black', opacity: 0.5}})
-      } else if(index === 2 && direction === 'up') {
-        TweenMax.to('.fixed-header-links', 0.5, {css:{color: 'white', opacity: 1}})
-      }
-    }
-  })
+        if(index == 1 && direction =='down') {
+          TweenMax.to('.fixed-header-links', 0.5, {css:{color: 'black', opacity: 0.5}});
+        } else if(index === 2 && direction === 'up') {
+          TweenMax.to('.fixed-header-links', 0.5, {css:{color: 'white', opacity: 1}});
+        }
+      },
+      responsiveWidth: 700
+    });
 });
