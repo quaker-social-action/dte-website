@@ -1,12 +1,17 @@
 .map-options {
   margin-top: 4em;
 }
-
+svg {
+  height:100%;
+}
 .map-reader {
   width: 100%;
+  height: auto;
   text-align: center;
   background-color: #9c27b0;
   color: white;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .map-title {
   text-align: center;
@@ -25,12 +30,13 @@
   background-color: white;
 }
 .map-wrapper {
-  height: 80%;
+  height: auto;
 }
 .map-description {
-  padding: 2em;
   background-color: #e1bee7;
   height: 100%;
+}
+.map-component {
 }
 
 @media (min-width: 768px) {
