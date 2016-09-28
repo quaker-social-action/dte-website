@@ -5,5 +5,60 @@
 @import './partials/_hdi';
 @import './partials/_bare';
 @import './partials/_extraOption';
+@import './partials/_lastpage';
 @import './partials/_colors';
 @import './partials/_fonts';
+
+.last-page {
+
+}
+.breakdown-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  text-align: left;
+}
+
+.cost-list {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  margin: 0.5em;
+}
+.list-item-wrapper {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cost-list-item {
+  display: inline-block;
+  text-decoration: none;
+
+  .material-icons {
+    padding-right: 10px;
+  }
+}
+
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #BE94CB;
+  height: 15vh;
+  a {
+    color: white;
+  }
+}
+
+
+.social-media {
+  background-color: #4C235C;
+  height: 15vh;
+}
