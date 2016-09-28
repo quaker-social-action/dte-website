@@ -7,11 +7,10 @@ body {
 }
 
 .optionElement {
-    background-color: #6F2CA2;
-    flex-grow: 1;
-    height: 200px;
-    margin-top: 5vw;
+    // background-color: #6F2CA2;
+    width: 200px;
 }
+
 
 .middle {
     margin-left: 2.5vw;
@@ -20,23 +19,9 @@ body {
 
 .optionContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 60vw;
-    position: absolute;
-    top: 30vh;
-    left: 20vw;
-}
-
-.optionContainer2 {
-    top: 60vh;
-}
-
-.optionContainer3 {
-    top: 60vh;
-}
-
-.optionContainer4 {
-    top: 90vh;
 }
 
 #orderSheet {
@@ -62,31 +47,53 @@ body {
 }
 
 .imageIcon {
-    height: 150px;
+    height: 80%;
     margin: auto;
-    margin-top: 25px;
+    position: relative;
+    top: 10%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     position: relative;
 }
 
+.purpleBox {
+    height: 150px;
+    background-color: #6F2CA2;
+}
+
+.purpleBoxClicked {
+    -webkit-box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
+    -moz-box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
+    box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
+}
+
+.purpleBox:hover {
+    -webkit-box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
+    -moz-box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
+    box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
+    cursor: pointer;
+}
+
 .caption {
-    font-size: 30px;
-    flex-grow: 1;
+    background-color: white;
+    font-size: 20px;
     color: #4D4D4D;
     text-align: left;
-    padding-left: 30px;
-    width: 30%;
-    height: 60px;
+    margin-top: 15px;
+    margin-right: 0;
+    padding-right: 0;
+    width: 200px;
+    height: 40px;
     border-bottom: 4px solid #E67842;
+    margin-bottom: 20px;
 }
 
 #addMore {
     color: #4D4D4D;
     position: absolute;
     right: 10vw;
-    top: 10vh;
+    top: 8vh;
     width: 30vw;
     font-size: 30px;
     line-height: 30px;
@@ -97,19 +104,28 @@ body {
     position: absolute;
     font-weight: 500;
     left: 10vw;
-    top: 10vh;
+    top: 8vh;
     width: 40vw;
     font-size: 70px;
-    line-height: 70px;
+    line-height: 54px;
 }
 
-@media (max-width: 700px) {
-  .optionContainer {
-    flex-direction: column;
-  }
+.optionflex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    position: absolute;
+    top: 35vh;
+    left: 20vw;
+    }
 
-  .middle {
-      margin-left: 0;
-      margin-right: 0;
-  }
+@media (max-width: 600px) {
+    #whatMore {
+        font-size: 30px;
+        line-height: 28px;
+    }
+    #addMore {
+        font-size: 15px;
+        line-height: 17px;
+    }
 }
