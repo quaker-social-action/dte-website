@@ -5,6 +5,9 @@
 var costListItem = Array.from(document.getElementsByClassName('cost-list-item'));
 
 costListItem.map((el) => {el.addEventListener('click', function(event){
+  if (event.target.tagName === 'I') {
+    return;
+  }
 
   if (event.target.style.textDecoration === 'line-through') {
     event.target.style.textDecoration = 'none';
