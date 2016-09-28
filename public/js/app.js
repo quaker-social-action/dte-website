@@ -54,4 +54,7 @@ $(document).ready(function() {
       },
       responsiveWidth: 700
     });
+
+    $(document).foundation();
 });
+
