@@ -1,6 +1,11 @@
-@import './base/_colors.scss';
-@import './base/_fonts.scss';
+@import './partials/_colors.scss';
+@import './partials/_fonts.scss';
 @import './partials/_index';
 @import './partials/_option';
 @import './partials/_result';
 @import './partials/_bare';
+
+@import './partials/_map';
+@import './partials/_components';
+
+
