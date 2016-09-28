@@ -11,6 +11,9 @@
 @import './partials/_extraOption';
 @import './partials/_lastpage';
 
+ul {
+    text-align: left;
+}
 
 body {
   // font-family: $open-sans;
@@ -22,6 +25,11 @@ body {
 h1 {
   font-family: $lato;
   font-weight: 400;
+}
+
+h2 {
+  font-family: $lato;
+  font-weight: 300;
 }
 
 h3 {
