@@ -4,6 +4,7 @@
 }
 
 .bare__title {
+  margin-top: 1em;
   color: #666;
   text-transform: uppercase;
 
@@ -37,6 +38,10 @@
   }
 }
 
+.bare__subtitle {
+  margin-top: 1em;
+}
+
 .bare__descriptions {
   background-color: rgb(250, 246, 250);
   padding: 2em 0 4em;
@@ -48,6 +53,7 @@
   height: 100%;
   padding: 2.5em;
   border-bottom: 4px solid rgb(228, 96, 0);
+
 }
 
 
@@ -56,4 +62,13 @@
     box-sizing: border-box;
     height: 60vh;
   }
+}
+
+.arrow__center {
+  width: 100vw;
+  background-color: rgb(250, 246, 250);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
 }
