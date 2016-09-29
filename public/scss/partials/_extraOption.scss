@@ -145,3 +145,41 @@ body {
         line-height: 17px;
     }
 }
+
+.breakdown-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  text-align: left;
+}
+
+.cost-list {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  margin: 0.5em;
+}
+.list-item-wrapper {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cost-list-item {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .material-icons {
+    padding-right: 10px;
+    cursor: default!important;
+  }
+}
