@@ -5,54 +5,67 @@
 var costListItem = Array.from(document.getElementsByClassName('cost-list-item'));
 
 costListItem.map((el) => {el.addEventListener('click', function(event){
-  if (event.target.tagName === 'I') {
-    return;
-  }
+    if (event.target.tagName === 'I') {
+        return;
+    }
 
-  if (event.target.style.textDecoration === 'line-through') {
-    event.target.style.textDecoration = 'none';
-    event.target.childNodes[0].innerHTML = 'done';
-
-  } else {
-    event.target.style.textDecoration = 'line-through';
-    event.target.childNodes[0].innerHTML = 'clear';
-  }
+    if (event.target.style.textDecoration === 'line-through') {
+        event.target.style.textDecoration = 'none';
+        event.target.childNodes[0].innerHTML = 'done';
+        updatePurple(event);
+    } else {
+        event.target.style.textDecoration = 'line-through';
+        event.target.childNodes[0].innerHTML = 'clear';
+        updatePurple(event);
+    }
 })});
 
+function updatePurple(event) {
+    var id = event.target.id
+    var number = id[4];
+    var purple = '#purple' + number
+    if ($(purple).hasClass('purpleBoxClicked')) {
+        $(purple).removeClass('purpleBoxClicked');
+    } else {
+        $(purple).addClass('purpleBoxClicked');
+    }
+    calculateOptionCost();
+}
+
 var granimInstance = new Granim({
-  element: '#landingpage-background',
-  name: 'basic-gradient',
-  direction: 'left-right',
-  opacity: [1, 1],
-  isPausedWhenNotInView: true,
-  states : {
-    "default-state": {
-      gradients: [
+    element: '#landingpage-background',
+    name: 'basic-gradient',
+    direction: 'left-right',
+    opacity: [1, 1],
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
         ['#BE94CB', '#674B7E'],
         ['#83a4d4', '#9B72C5'],
         ['#9D50BB', '#6E48AA']
-      ]
+            ]
+        }
     }
-  }
 });
 
 $(document).ready(function() {
     var isMobile = function(){
-      var width = document.body.scrollWidth;
-      return width < 600;
+        var width = document.body.scrollWidth;
+        return width < 600;
     };
 
     $('#fullpage').fullpage({
-      anchors:['home', 'info', 'direct-cremation', 'option1', 'extra-option', 'map','contact'],
-      onLeave: function(index, nextIndex, direction) {
+        anchors:['home', 'info', 'direct-cremation', 'option1', 'extra-option', 'map','contact'],
+        onLeave: function(index, nextIndex, direction) {
 
-        if(index == 1 && direction =='down') {
-          TweenMax.to('.fixed-header-links', 0.5, {css:{color: 'black', opacity: 0.5}});
-        } else if(index === 2 && direction === 'up') {
-          TweenMax.to('.fixed-header-links', 0.5, {css:{color: 'white', opacity: 1}});
-        }
-      },
-      responsiveWidth: 700
+            if(index == 1 && direction =='down') {
+                TweenMax.to('.fixed-header-links', 0.5, {css:{color: 'black', opacity: 0.5}});
+            } else if(index === 2 && direction === 'up') {
+                TweenMax.to('.fixed-header-links', 0.5, {css:{color: 'white', opacity: 1}});
+            }
+        },
+        responsiveWidth: 700
     });
 
     $(document).foundation();
