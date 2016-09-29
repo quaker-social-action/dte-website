@@ -62,3 +62,47 @@ h4 {
 .landing-arrow-style {
   margin-top: 10px;
 }
+
+.map-page-header {
+  background-color: $purple-header;
+  text-align: center;
+  height: 20vh;
+  color: white;
+}
+
+.map-page-header h3 {
+  color: white;
+}
+
+.info-section {
+  background-color: $background2;
+  height: 80vh;
+}
+.map-wrapper {
+  height: 80vh;
+  background-color: $background2;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.map {
+  height: 80vh;
+}
+
+.map-info-wrapper {
+  height: 80vh;
+  text-align: center;
+  padding-top: 5em;
+}
+
+.map-cards {
+  padding-top: 4em;
+}
+
+.map-card {
+  background-color: white;
+}
+
+#mapPage {
+  background-color: $background2;
+}
