@@ -1,34 +1,5 @@
 .last-page {
-
-}
-.breakdown-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 70vh;
-  text-align: left;
-}
-
-.list-item-wrapper {
-  margin: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.cost-list-item {
-  display: inline-block;
-  text-decoration: none;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  .material-icons {
-    padding-right: 10px;
-    cursor: default!important;
-  }
+background-color: #BF93CC;
 }
 
 .contact-us {
@@ -37,19 +8,24 @@
   align-items: center;
   color: white;
   background-color: #BE94CB;
-  height: 15vh;
+  height: 40vh;
   a {
     color: white;
   }
 }
 
-
 .social-media {
   background-color: #4C235C;
-  height: 15vh;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  .widget {
+    justify-content: space-around;
+    margin: 10px;
+  }
 }
-
-// .breakdown-info-wrapper {
-//     margin-left: 20%;
-//     margin-top: 10%;
-// }
