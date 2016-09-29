@@ -1,9 +1,7 @@
 .map-options {
   margin-top: 4em;
 }
-svg {
-  height:100%;
-}
+
 .map-reader {
   width: 100%;
   height: auto;
@@ -20,23 +18,62 @@ svg {
   padding-top: 5%;
   margin: 0;
 }
-.map-card {
-  background-color: blue;
-}
+
 .card {
   font-size: .8em;
   padding: 1em;
   border-bottom: 4px solid rgb(228, 96, 0);
   background-color: white;
 }
-.map-wrapper {
-  height: auto;
-}
+
 .map-description {
   background-color: #e1bee7;
   height: 100%;
 }
-.map-component {
+
+.map-page-header {
+  background-color: $purple-header;
+  text-align: center;
+  height: 30vh;
+  color: white;
+}
+
+.map-page-header h3 {
+  color: white;
+}
+
+.info-section {
+  background-color: $background2;
+  height: 70vh;
+}
+
+.map-wrapper {
+  height: 70vh;
+  background-color: $background2;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.map {
+  height: 85%;
+}
+
+.map-info-wrapper {
+  height: 70vh;
+  text-align: center;
+  padding-top: 5em;
+}
+
+.map-cards {
+  padding-top: 4em;
+}
+
+.map-card {
+  background-color: white;
+}
+
+#mapPage {
+  background-color: $background2;
 }
 
 @media (min-width: 768px) {
@@ -44,4 +81,7 @@ svg {
     padding-left: 30%;
     padding-right: 30%;
   }
+}
+.title-map {
+  margin-top: 60px;
 }
