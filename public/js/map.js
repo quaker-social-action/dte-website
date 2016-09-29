@@ -101,18 +101,18 @@ clickable.map((region) => {
     region.addEventListener('click', () => {
         handleRegionClick(region.id)
         clickable.map((el) => {
-            el.style.fill = '#008000';
+            el.style.fill = '#9C6FC7';
         })
-        region.style.fill = 'blue'
+        region.style.fill = '#FFB88B'
     })
     region.addEventListener('mouseover', () => {
         clickable.map((el) => {
-            if(el.style.fill === 'yellow') {
-                el.style.fill = '#008000'
+            if(el.style.fill === 'purple') {
+                el.style.fill = '#9C6FC7'
             }
         })
-        if(region.style.fill !== 'blue') {
-            region.style.fill = 'yellow'
+        if(region.style.fill !== '#FFB88B') {
+            region.style.fill = 'purple'
         }
     })
 })
