@@ -91,15 +91,13 @@ body {
 }
 
 .purpleBoxClicked {
-    -webkit-box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
-    -moz-box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
-    box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
+    border: 5px solid #4D4D4D;
 }
 
 .purpleBox:hover {
-    -webkit-box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
-    -moz-box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
-    box-shadow: -1px 4px 24px 2px rgba(133,133,133,1);
+    -webkit-box-shadow: -1px 4px 10px 2px rgba(133,133,133,1);
+    -moz-box-shadow: -1px 4px 10px 2px rgba(133,133,133,1);
+    box-shadow: -1px 4px 10px 2px rgba(133,133,133,1);
     cursor: pointer;
 }
 
