@@ -1,7 +1,7 @@
 .bare__header {
   padding: 2em 0;
   text-align: center;
-  line-height: .72em;
+  line-height: 0.72em;
 }
 
 .bare__title {
@@ -24,7 +24,7 @@
   .bare__title {
     display: inline-block;
     font-size: 4em;
-    line-height: .72em;
+    line-height: .73em;
     width: 560px;
 
     & strong {
@@ -52,7 +52,7 @@
 .bare__description {
   font-size: .8em;
   height: 100%;
-  padding: 20px;
+  padding: 2.5em;
   border-bottom: 4px solid rgb(228, 96, 0);
 
 }
@@ -71,5 +71,5 @@
   display: flex;
   justify-content: center;
   align-items: baseline;
-  padding-top: 40px;
+
 }
