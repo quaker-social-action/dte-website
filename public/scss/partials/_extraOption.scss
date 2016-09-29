@@ -1,7 +1,14 @@
-body {
-    margin: 0;
-}
 
+.extraOptions__subtitle {
+  font-size: 1em;
+  width: 400px;
+  float: right;
+
+}
+.extraOptions__title {
+  width: 560px;
+  font-size: 3.5em;
+}
 .extraOptions__header {
   padding: 2em 0;
   text-align: center;
@@ -21,7 +28,7 @@ body {
 
   .extraOptions__title {
     display: inline-block;
-    font-size: 4em;
+    font-size: 3.5em;
     line-height: .75em;
     width: 560px;
 
