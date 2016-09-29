@@ -43,7 +43,7 @@ $(document).ready(function() {
     };
 
     $('#fullpage').fullpage({
-      anchors:['landing', 'info', 'option1', 'option2', 'option3', 'option4','option5'],
+      anchors:['home', 'info', 'direct-cremation', 'option1', 'extra-option', 'map','contact'],
       onLeave: function(index, nextIndex, direction) {
 
         if(index == 1 && direction =='down') {
@@ -57,4 +57,3 @@ $(document).ready(function() {
 
     $(document).foundation();
 });
-
