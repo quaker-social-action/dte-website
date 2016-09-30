@@ -1,7 +1,7 @@
 var regionCost = 4263;
 var optionCosts = 0;
 var cremation = true; //false if burial
-var regionName = 'wales';
+var regionName = 'London';
 
 var regionOption = {
     Wales: {
