@@ -7,6 +7,7 @@ document.getElementById(`purple0`).addEventListener('click', function () {
     }
     updateList(0)
     calculateOptionCost();
+    $('#cost').html('£' + (regionCost + optionCosts))
 })
 
 document.getElementById(`purple1`).addEventListener('click', function () {
@@ -17,6 +18,7 @@ document.getElementById(`purple1`).addEventListener('click', function () {
     }
     updateList(1)
     calculateOptionCost();
+    $('#cost').html('£' + (regionCost + optionCosts))
 })
 
 document.getElementById(`purple2`).addEventListener('click', function () {
@@ -27,6 +29,7 @@ document.getElementById(`purple2`).addEventListener('click', function () {
     }
     updateList(2)
     calculateOptionCost();
+    $('#cost').html('£' + (regionCost + optionCosts))
 })
 
 document.getElementById(`purple3`).addEventListener('click', function () {
@@ -37,6 +40,7 @@ document.getElementById(`purple3`).addEventListener('click', function () {
     }
     updateList(3)
     calculateOptionCost();
+    $('#cost').html('£' + (regionCost + optionCosts))
 })
 document.getElementById(`purple4`).addEventListener('click', function () {
     if ($(`#purple4`).hasClass('purpleBoxClicked')) {
@@ -46,6 +50,7 @@ document.getElementById(`purple4`).addEventListener('click', function () {
     }
     updateList(4)
     calculateOptionCost();
+    $('#cost').html('£' + (regionCost + optionCosts))
 })
 document.getElementById(`purple5`).addEventListener('click', function () {
     if ($(`#purple5`).hasClass('purpleBoxClicked')) {
@@ -55,6 +60,7 @@ document.getElementById(`purple5`).addEventListener('click', function () {
     }
     updateList(5)
     calculateOptionCost();
+    $('#cost').html('£' + (regionCost + optionCosts))
 })
 
 function updateList(number) {
