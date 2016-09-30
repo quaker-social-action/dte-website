@@ -1,10 +1,10 @@
-var regionCost = 0;
+var regionCost = 4263;
 var optionCosts = 0;
 var cremation = true; //false if burial
 var regionName = 'wales';
 
 var regionOption = {
-    wales: {
+    Wales: {
         c: 3348,
         b: 4150,
         ordersheet: 82,
@@ -14,7 +14,7 @@ var regionOption = {
         catering: 271,
         limousine: 310
     },
-    southEast: {
+    'the South East': {
         c: 3633,
         b: 4716,
         ordersheet: 74,
@@ -24,7 +24,7 @@ var regionOption = {
         catering: 403,
         limousine: 252
     },
-    london: {
+    'London': {
         c: 4263,
         b: 6974,
         ordersheet: 76,
@@ -34,7 +34,7 @@ var regionOption = {
         catering: 662,
         limousine: 282
     },
-    midlands: {
+    'the Midlands': {
         c: 3377,
         b: 4594,
         ordersheet: 84,
@@ -44,7 +44,7 @@ var regionOption = {
         catering: 352,
         limousine: 220
     },
-    yorkshire: {
+    Yorkshire: {
         c: 3526,
         b: 4594,
         ordersheet: 75,
@@ -54,7 +54,7 @@ var regionOption = {
         catering: 345,
         limousine: 357
     },
-    scotland: {
+    Scotland: {
         c: 3322,
         b: 4383,
         ordersheet: 74,
@@ -64,7 +64,7 @@ var regionOption = {
         catering: 390,
         limousine: 197
     },
-    southwest: {
+    'the South West': {
         c: 3749,
         b: 4556,
         ordersheet: 65,
@@ -74,7 +74,7 @@ var regionOption = {
         catering: 534,
         limousine: 268
     },
-    northeast: {
+    'the North': {
         c: 3362,
         b: 4305,
         ordersheet: 54,
@@ -84,7 +84,7 @@ var regionOption = {
         catering: 304,
         limousine: 168
     },
-    ireland: {
+    'Northern Ireland': {
         c: 3281,
         b: 3524,
         ordersheet: 73,
@@ -116,10 +116,13 @@ clickable.map((region) => {
         }
     })
 })
+
 function handleRegionClick(region) {
+  console.log(region)
     $('#displayed-region').html(region)
     calculateRegionCost(region, cremation)
     regionName = region
+    $('#cost').html('£' + (regionCost + optionCosts))
 }
 
 
