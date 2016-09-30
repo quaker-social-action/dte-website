@@ -70,6 +70,14 @@
 
 .map-card {
   background-color: white;
+
+  p:first-of-type {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+  p:last-of-type {
+    font-size: 1.2em;
+  }
 }
 
 #mapPage {
