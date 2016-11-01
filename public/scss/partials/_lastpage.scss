@@ -7,8 +7,7 @@ background-color: #BF93CC;
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #BE94CB;
-  height: 40vh;
+  height: 50%;
   a {
     color: white;
   }
@@ -16,16 +15,16 @@ background-color: #BF93CC;
 
 .social-media {
   background-color: #4C235C;
-  height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
+  height: 50%;
+  display: block;
+}
+
+.widgets {
+  text-align: center;
+  margin: 0 auto;
   left: 0;
-  .widget {
-    justify-content: space-around;
-    margin: 10px;
-  }
+  right: 0;
+}
+.widget {
+ margin: 20px;
 }
