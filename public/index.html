@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:300,400,700" rel="stylesheet">
   </head>
   <body>
+    <!-- Nav -->
     <header id="fixed-header">
       <nav class="navbar">
         <ul class="dropdown menu" data-dropdown-menu>
@@ -28,8 +29,9 @@
         </ul>
       </nav>
     </header>
-    <div id="fullpage">
-      <div class="section active" data-anchor="home">
+
+    <!-- landing -->
+      <div class="section" data-anchor="home">
         <section id="landingpage-first-half">
           <img class="header-img" src="assets/qsa.jpeg" alt="quaker social action logo" />
           <div class="landing-info">
@@ -61,6 +63,7 @@
           </div>
         </section>
       </div>
+      <!-- options-page -->
       <section class="info-page section" data-anchor="info">
         <div class="row">
           <div class="columns large-4">
@@ -87,8 +90,10 @@
               <div class="option-text">Want something more than a simple funera;? There are several options to make a simple
                 plan tailored to your needs.</div>
           </div>
+        </div>
       </section>
-      <section class="bare section" data-anchor="direct-cremation">
+      <!-- what is direct-cremation -->
+      <section class="bare section options cremation-direct" data-anchor="direct-cremation">
         <header class="row bare__header">
           <h1 class="bare__title h1-title">What is a 'direct cremation'?</h1>
           <h2 class="bare__subtitle h2-title">Funeral costs soar then times higher than costs of living.
@@ -116,7 +121,8 @@
           </div>
         </div>
       </section>
-      <section class="hdi-work section route-1" data-anchor="option1">
+      <!-- direct-cremation more info  -->
+      <section class="hdi-work section options cremation-direct" data-anchor="option1">
         <h3 class="h3-title">DIRECT CREMATION</h3>
         <div class="row" data-equalizer="cremation" data-equalizer-mq="medium">
           <div class="hdi-card columns medium-4" data-equalizer-watch="cremation">
@@ -163,7 +169,67 @@
           </div>
         </div>
       </section>
-      <section id="mapPage" class="section" data-anchor="map">
+
+      <!-- What is simple funeral-->
+    <section class="bare section" data-anchor="direct-cremation">
+      <header class="row bare__header">
+        <h1 class="bare__title">What is a 'simple funeral'?</h1>
+        <h2 class="bare__subtitle">Like many people you may want to use the services of a funeral director.
+          <p></p>However it is not always clear what the simplest service is.</h2>
+      </header>
+      <div class="bare__descriptions">
+        <div class="row" data-equalizer="bare" data-equalizer-mq="medium">
+          <div class="captionBare large-4 columns" data-equalizer-watch="bare">
+            <div class="bare__description">Many parts of a traditional service are optional and often cost more money than doing it yourself. A simple funeral provides the services of a funeral director, but without the extras and additional costs.</div>
+          </div>
+          <div class="userStory large-4 columns" data-equalizer-watch="bare">
+            <div class="bare__description">"To keep costs manageable, Mary took responsibility for arranging her mum’s funeral and chose a cremation at her local cemetery. People were coming from many different places to attend the funeral.<br>They were all driving, so Mary decided that rather than people driving in convoy, they would meet together at the crematorium. Instead of paying for the optional limousine, Mary’s next-door neighbour offered to drive her to the service."</div>
+          </div>
+          <div class="userStory large-4 columns" data-equalizer-watch="bare">
+            <div class="bare__description">
+                <strong>A simple funeral package generally includes:</strong><p></p>
+                <ul>
+                  <li>Funeral director’s time and overheads - professional fees</li>
+                  <li>Collection / transport of body</li>
+                  <li>Doctors fee</li>
+                  <li>Simple coffin</li>
+                  <li>Hearse</li>
+                  <li>Celebrant/officiate fee</li>
+                  <li>Crematorium fee or burial fee</li>
+                </ul>
+                <p>In the next section you will be able to see avarage prices divided by region.</p>
+            </div>
+          </div>
+        </div>
+        <div class="arrow__center">
+          <a href="#option1">
+            <svg id="bare__arrow" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+              <path d="M0-.75h24v24H0z" fill="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- whats next -->
+        <!-- <div class="hdi-card columns medium-4" data-equalizer-watch="cremation">
+          <div class="hdi-background">
+            <span class="hdi-number">3.</span>
+            <div class="hdi-text">
+              <strong>What next?</strong><p></p>
+              <ul>
+                <li>Check Good Funeral Guide online or search “direct cremation” to check out more details.</li>
+                <li>Ask a few local funeral directors if they provide direct cremations and the cost.</li>
+                <li>If you want a direct cremation, make this clear in your will and let your family and friends know.</li>
+              </ul>
+              <p>If this is not for you, choose another plan from the options page by clicking <a href="#info"><strong>here</strong></a>.</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- map page -->
+      <section id="mapPage" class="section options" data-anchor="map">
         <div class="map-page-header">
           <div class="row">
             <h3 class="title-map h3-title">WHAT IF I WANT MORE?</h3>
@@ -675,7 +741,8 @@
           </div>
         </div>
       </section>
-      <section id="extraOptionPage" class="section" data-anchor="extra-option" >
+      <!-- extra options page -->
+      <section id="extraOptionPage" class="section options" data-anchor="extra-option" >
         <div class="row extraOptions__header">
           <h1 class="extraOptions__title h1-title">OPTIONAL EXRTAS TO TAILOR YOUR FUNERAL SERVICE</h1>
           <h2 class="extraOptions__subtitle h2-title">You can add optional items to tailor your funeral plan. These are available from a funeral director at additional cost, so make sure these are itemised in your quotes. <p></p>Click items below to add these to your simple bespoke plan.</h2>
@@ -719,6 +786,7 @@
               <div class="caption">Limousine</div>
             </div>
           </div>
+        </div>
           <div class="breakdown-info-wrapper">
             <div class="cost-list">
               <div class="list-item-wrapper"><span class="cost-list-item" id="list0"><i class="material-icons">done</i>Order sheets</span></div>
@@ -729,23 +797,25 @@
               <div class="list-item-wrapper"><span class="cost-list-item" id="list5"><i class="material-icons">done</i>Limousine</span></span></div>
             </div>
             <h3 class="h3-title">Total cost: <span id="cost-breakdown">£4263</span></h3>
-          </div>
-      </section>
 
-      <section class="last-page section" data-anchor="contact">
+      </section>
+      <!-- contact footer -->
+      <section class="last-page section options" data-anchor="contact">
         <div class="contact-us">
           <a href="#"><h3 class="h3-title">Contact us</h3></a>
         </div>
         <div class="social-media">
-          <img class="widget" src="./assets/facebook_widget.png" alt="fb" />
-          <img class="widget" src="./assets/twitter_widget.png" alt="twitter" />
-          <img class="widget" src="./assets/email_widget.png" alt="email" />
+          <div class="widgets">
+            <img class="widget" src="./assets/facebook_widget.png" alt="fb" />
+            <img class="widget" src="./assets/twitter_widget.png" alt="twitter" />
+            <img class="widget" src="./assets/email_widget.png" alt="email" />
+          </div>
         </div>
       </section>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
         <script src="js/vendor/jquery.js"></script>
-        <script src="js/vendor/jquery.fullPage.min.js" charset="utf-8"></script>
+        <!-- <script src="js/vendor/jquery.fullPage.min.js" charset="utf-8"></script> -->
         <script src="js/vendor/what-input.js"></script>
         <script src="js/vendor/foundation.min.js"></script>
         <script src="js/vendor/granim.min.js" charset="utf-8"></script>

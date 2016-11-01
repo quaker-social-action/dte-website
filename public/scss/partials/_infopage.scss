@@ -1,39 +1,17 @@
 .info-page {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
   text-align: center;
 }
 
 .options-half {
-  position: absolute;
-  top: 0;
   background-color: #F5EAF5;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding-right: 10%;
   padding-left: 10%;
   padding-top: 100px;
-  align-items: center;
-
-  h4 {
-    margin-top: 1em;
-  }
 }
 
 .option-round-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content:space-between;
-  align-items: center;
-  width: 30vw;
-  height: 50vh;
+  width: 33.33%;
+  height: 100%;
   text-align: center;
   margin: 1em;
 }
@@ -44,9 +22,7 @@
   width: 222px;
   margin: 0 auto 2em;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+
   -webkit-box-shadow: 7px 9px 16px -5px #a2a2a2;
   -moz-box-shadow: 7px 9px 16px -5px #a2a2a2;
   box-shadow: 7px 9px 16px -5px #a2a2a2;

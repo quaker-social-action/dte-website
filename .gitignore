@@ -5,3 +5,5 @@ stylesheet.css.map
 node_modules
 
 .swp
+
+public/css/stylesheet.css

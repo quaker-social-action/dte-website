@@ -1,24 +1,24 @@
 //Globals
 
-//
+var costListItem = [].slice.call(document.getElementsByClassName('cost-list-item'));
 
-var costListItem = Array.from(document.getElementsByClassName('cost-list-item'));
+costListItem.map(function(el){
+  el.addEventListener('click', function(event){
+    if (event.target.tagName === 'I') {
+      return;
+    }
 
-costListItem.map((el) => {el.addEventListener('click', function(event){
-  if (event.target.tagName === 'I') {
-    return;
-  }
-
-  if (event.target.style.textDecoration === 'line-through') {
-    event.target.style.textDecoration = 'none';
-    event.target.childNodes[0].innerHTML = 'done';
-    updatePurple(event);
-  } else {
-    event.target.style.textDecoration = 'line-through';
-    event.target.childNodes[0].innerHTML = 'clear';
-    updatePurple(event);
-  }
-});});
+    if (event.target.style.textDecoration === 'line-through') {
+      event.target.style.textDecoration = 'none';
+      event.target.childNodes[0].innerHTML = 'done';
+      updatePurple(event);
+    } else {
+      event.target.style.textDecoration = 'line-through';
+      event.target.childNodes[0].innerHTML = 'clear';
+      updatePurple(event);
+    }
+  });
+});
 
 function updatePurple(event) {
   var id = event.target.id;
@@ -55,18 +55,44 @@ $(document).ready(function() {
     return width < 600;
   };
 
-  $('#fullpage').fullpage({
-    anchors: ['home', 'info', 'direct-cremation', 'option1', 'map', 'extra-option', 'contact'],
-    onLeave: function(index, nextIndex, direction) {
-
-      if(index == 1 && direction =='down') {
-        TweenMax.to('.fixed-header-links', 0.5, {css: {color: 'black', opacity: 0.5}});
-      } else if(index === 2 && direction === 'up') {
-        TweenMax.to('.fixed-header-links', 0.5, {css: {color: 'white', opacity: 1}});
-      }
-    },
-    responsiveWidth: 700
-  });
+//   $('#fullpage').fullpage({
+//     anchors: ['home', 'info', 'direct-cremation', 'option1', 'map', 'extra-option', 'contact'],
+//     onLeave: function(index, nextIndex, direction) {
+//
+//       if(index == 1 && direction =='down') {
+//         TweenMax.to('.fixed-header-links', 0.5, {css: {color: 'black', opacity: 0.5}});
+//       } else if(index === 2 && direction === 'up') {
+//         TweenMax.to('.fixed-header-links', 0.5, {css: {color: 'white', opacity: 1}});
+//       }
+//     },
+//     responsiveWidth: 700
+//   });
 
   $(document).foundation();
+
+  // Routing
+  window.addEventListener('hashchange', function(){
+    var route = location.hash.replace('#', '');
+
+    $('.section.options').hide();
+    switch (route) {
+      case 'direct-cremation':
+        $('.section.cremation-direct').show();
+        break;
+      case 'simple':
+        $('.section.simple').show();
+        break;
+      case 'bespoke':
+        $('.section.bespoke').show();
+        break;
+      default:
+        break;
+    }
+
+    $('.section.last-page').show();
+
+  }, false);
+
+  // Hide all the option sections
+  $('.section.options').hide();
 });
