@@ -47,9 +47,24 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  -webkit-box-shadow: 7px 9px 16px -5px #a2a2a2;
+  -moz-box-shadow: 7px 9px 16px -5px #a2a2a2;
+  box-shadow: 7px 9px 16px -5px #a2a2a2;
+  &:hover{
+    animation: scaling 1s ease-in;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+  }
 }
 
-
+@keyframes scaling {
+  0% {
+      transform: scale(1.0);
+  }
+  100% {
+      transform: scale(1.1);
+  }
+}
 .option-text {
   margin: 1em auto 1.5em;
   font-weight: 300;
