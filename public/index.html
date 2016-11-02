@@ -65,38 +65,49 @@
           </div>
         </section>
       </div>
-      <!-- options-page -->
-      <section class="info-page section" data-anchor="info">
 
+      <!-- options-page -->
+      <section class="info-page section">
         <div class="row">
-          <div class="columns large-4 option-round-wrap">
-            <a href="#direct-cremation" class="text-center"><div class="option-round">
+          <!-- direct cremation option btn -->
+          <div class="columns large-4">
+            <a href="#direct-cremation" class="text-center">
+              <div class="option-round">
                 <img class="round-image" src="./assets/round-illustration1.png" alt="round1">
-              </div></a>
+              </div>
+            </a>
               <h4 class="h4-title">Direct cremation</h4>
               <div class="option-text">The simplest and most affordable option, and growing in popularity. With no funeral service,
                 there is choice and flexibility about how you say farewell. </div>
           </div>
-          <div class="columns large-4 option-round-wrap">
-            <a href="#map" class="text-center"><div class="option-round">
+          <!-- simple funeral option btn -->
+          <div class="columns large-4">
+            <a href="#simple" class="text-center">
+              <div class="option-round">
                 <img class="round-image" src="./assets/round-illustration2.png" alt="round2">
-              </div></a>
+              </div>
+            </a>
               <h4 class="h4-title">Simple funeral Service</h4>
               <div class="option-text">A more traditional funeral service, but without the added extras. This is a good option
                 when you want a full funeral service at a more modest cost. </div>
           </div>
-          <div class="columns large-4 option-round-wrap">
-            <a href="#map" class="text-center"><div class="option-round">
+          <!-- bespoke funeral option btn -->
+          <div class="columns large-4">
+            <a href="#bespoke" class="text-center">
+              <div class="option-round">
                 <img class="round-image" src="./assets/round-illustration3.png" alt="round3">
-              </div></a>
+              </div>
+            </a>
               <h4 class="h4-title">Simple bespoke Service</h4>
-              <div class="option-text">Want something more than a simple funera;? There are several options to make a simple
+              <div class="option-text">Want something more than a simple funeral? There are several options to make a simple
                 plan tailored to your needs.</div>
           </div>
         </div>
       </section>
+
       <!-- what is direct-cremation -->
-      <section class="bare section options cremation-direct" data-anchor="direct-cremation">
+      <section class="bare section options cremation-direct">
+        <a name="direct-cremation"></a>
         <header class="row bare__header">
           <h1 class="bare__title h1-title">What is a 'direct cremation'?</h1>
           <h2 class="bare__subtitle h2-title">Funeral costs soar then times higher than costs of living.
@@ -115,15 +126,16 @@
             </div>
           </div>
           <a class="landing-arrow-style" href="#info">
-            <svg id="landing-arrow" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+            <svg class="landing-arrow-style" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
               <path d="M0-.75h24v24H0z" fill="none"/>
             </svg>
           </a>
           </div>
       </section>
+
       <!-- direct-cremation more info  -->
-      <section class="hdi-work section options cremation-direct" data-anchor="option1">
+      <section class="hdi-work section options cremation-direct">
         <h3 class="h3-title">DIRECT CREMATION</h3>
         <div class="row" data-equalizer="cremation" data-equalizer-mq="medium">
           <div class="hdi-card columns medium-4" data-equalizer-watch="cremation">
@@ -171,8 +183,10 @@
         </div>
       </section>
 
+
       <!-- What is simple funeral-->
-    <section class="bare section" data-anchor="direct-cremation">
+    <section class="section options simple">
+      <a name="simple"></a>
       <header class="row bare__header">
         <h1 class="bare__title">What is a 'simple funeral'?</h1>
         <h2 class="bare__subtitle">Like many people you may want to use the services of a funeral director.
@@ -184,22 +198,12 @@
             <div class="bare__description">Many parts of a traditional service are optional and often cost more money than doing it yourself. A simple funeral provides the services of a funeral director, but without the extras and additional costs.</div>
           </div>
           <div class="userStory large-4 columns" data-equalizer-watch="bare">
-            <div class="bare__description">"To keep costs manageable, Mary took responsibility for arranging her mum’s funeral and chose a cremation at her local cemetery. People were coming from many different places to attend the funeral.<br>They were all driving, so Mary decided that rather than people driving in convoy, they would meet together at the crematorium. Instead of paying for the optional limousine, Mary’s next-door neighbour offered to drive her to the service."</div>
+            <div class="bare__description">"To keep costs manageable, Mary took responsibility for arranging her mum’s funeral and chose a cremation at her local cemetery. People were coming from many different places to attend the funeral.</div>
           </div>
           <div class="userStory large-4 columns" data-equalizer-watch="bare">
-            <div class="bare__description half">
-                <strong>A simple funeral package generally includes:</strong><p></p>
-                <ul>
-                  <li>Funeral director’s time and overheads - professional fees</li>
-                  <li>Collection / transport of body</li>
-                  <li>Doctors fee</li>
-                  <li>Simple coffin</li>
-                  <li>Hearse</li>
-                  <li>Celebrant/officiate fee</li>
-                  <li>Crematorium fee or burial fee</li>
-                </ul>
-                <p>In the next section you will be able to see avarage prices divided by region.</p>
-            </div>
+
+            <div class="bare__description">They were all driving, so Mary decided that rather than people driving in convoy, they would meet together at the crematorium. Instead of paying for the optional limousine, Mary’s next-door neighbour offered to drive her to the service."<p><br><strong>Go to the next section to see avarage prices accorging to your region</strong></p></div>
+
           </div>
         </div>
         <a class="landing-arrow-style" href="#info">
@@ -211,6 +215,19 @@
         </div>
       </div>
     </section>
+
+    <!-- what it includes -->
+    <!-- <strong>A simple funeral package generally includes:</strong><p></p>
+    <ul>
+      <li>Funeral director’s time and overheads - professional fees</li>
+      <li>Collection / transport of body</li>
+      <li>Doctors fee</li>
+      <li>Simple coffin</li>
+      <li>Hearse</li>
+      <li>Celebrant/officiate fee</li>
+      <li>Crematorium fee or burial fee</li>
+    </ul>
+    <p>In the next section you will be able to see avarage prices divided by region.</p> -->
 
     <!-- whats next -->
         <!-- <div class="hdi-card columns medium-4" data-equalizer-watch="cremation">
@@ -228,13 +245,14 @@
           </div>
         </div>
       </div> -->
+
       <!-- map page -->
-      <section id="mapPage" class="section options" data-anchor="map">
+      <section id="mapPage" class="section options simple" data-anchor="map">
         <div class="map-page-header">
           <div class="row">
-            <h3 class="title-map h3-title">WHAT IF I WANT MORE?</h3>
-            <p>If you want something more than a simple service, here are several estimated prices divided by region
-              <br>followed by our 'options picker' for a tailored funeral plan.</p>
+            <h3 class="title-map h3-title">CHOOSE YOUR REGION</h3>
+            <p>Here are several estimated prices divided by region
+              <br>Click the map to choose your region and continue to the next section to know more</p>
           </div>
         </div>
         <div class="row info-section">
@@ -717,29 +735,8 @@
           <div class="small-12 medium-7 columns map-info-wrapper">
             <h4 class="h4-title">Our estimate is that in <span id="displayed-region">London</span> the price is:</h4>
             <h3 class="h3-title" id="cost">£4263</h3>
-            <div class="row map-cards" data-equalizer="map" data-equalizer-mq="medium">
-              <div class="small-12 medium-6 columns" data-equalizer-watch="map">
-                <div class="bare__description map-card">
-                  <p>"Mary had taken responsibility for arranging her mum’s funeral. She wanted a cremation at her local cemetery. People were coming from lots of different places to attend the funeral. They were all driving, so Mary decided that rather than people driving in convoy, they would meet at the crematorium.</p>
-                </div>
-              </div>
-              <div class="small-12 medium-6 columns" data-equalizer-watch="map">
-                <div class="bare__description map-card">
-                  <p>Mary didn’t want to use a limousine and her next-door neighbour offered to drive her to the crematorium."</p>
-                  <p> Click the map to see avarage prices in your region. If you want to add more options to your funeral plan, got to the next section</p>
-                </div>
-              </div>
-            </div>
-            <div id="arrow__center">
-              <a href="#extra-option">
-                <svg id="map__arrow" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-                  <path d="M0-.75h24v24H0z" fill="none"/>
-                </svg>
-              </a>
-            </div>
           </div>
-        </div>
+        </div>  
       </section>
       <!-- extra options page -->
       <section id="extraOptionPage" class="section options" data-anchor="extra-option" >
