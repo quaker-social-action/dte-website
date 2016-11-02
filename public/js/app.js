@@ -54,32 +54,40 @@ $(document).ready(function() {
     var width = document.body.scrollWidth;
     return width < 600;
   };
-
-  $(document).foundation();
-
-  // Routing
-  window.addEventListener('hashchange', function(){
-    var route = location.hash.replace('#', '');
-
-    $('.section.options').hide();
-    switch (route) {
-      case 'direct-cremation':
-        $('.section.cremation-direct').show();
-        break;
-      case 'simple':
-        $('.section.simple').show();
-        break;
-      case 'bespoke':
-        $('.section.bespoke').show();
-        break;
-      default:
-        break;
-    }
-
-    $('.section.last-page').show();
-
-  }, false);
-
-  // Hide all the option sections
-  $('.section.options').hide();
 });
+  // var btn = $('.route a');
+
+//   btn.click(function(e){
+//     e.preventDefault();
+//     var location = $(this).attr('href');
+//     loadContent(location);
+//     window.location.hash = location;
+//   })
+//
+//   $(document).foundation();
+//
+//   function loadContent(location) {
+//
+//     var route = location.replace('#', '');
+//
+//     $('.section.options').hide();
+//     switch (route) {
+//       case 'direct-cremation':
+//         $('.section.cremation-direct').show();
+//         break;
+//       case 'simple':
+//         $('.section.simple').show();
+//         break;
+//       case 'bespoke':
+//         $('.section.bespoke').show();
+//         break;
+//       default:
+//         break;
+//     }
+//
+//     $('.section.last-page').show();
+//
+//   }
+//   // Hide all the option sections
+//   $('.section.options').hide();
+// });
