@@ -3,7 +3,7 @@ $(document).ready(function() {
     //Navigation
     menu: '#menu',
     lockAnchors: false,
-    anchors:['firstPage', 'secondPage'],
+    anchors:['bespoke', 'map', 'extra-option', 'bespoke_summery', 'bespoke_footer'],
     navigation: false,
     navigationPosition: 'right',
     navigationTooltips: ['firstSlide', 'secondSlide'],
