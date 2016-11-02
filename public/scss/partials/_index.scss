@@ -15,10 +15,6 @@
 }
 
 .navbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
   height: 20px;
   width: 300px;
   right: 1em;
@@ -29,14 +25,9 @@
 .fixed-header-links {
   font-weight: 600;
   display: inline;
-  color: white;
+  color: #8E8E8E;
+  opacity: 0.9;
   padding-right: 30px;
-}
-
-.background-filter {
-  background-color: #E1BEE7;
-  height: 100vh;
-  width: 100vw;
 }
 
 #landingpage-background {
@@ -53,9 +44,8 @@
 
 #landingpage-first-half {
   z-index: 99;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+
 }
 
 #landingpage-second-half {
@@ -65,17 +55,16 @@
 
 @media screen and (min-width: 64em) {
   #landingpage-first-half {
-    height: 60vh;
+    height: 60%;
   }
 
   #landingpage-second-half {
-    height: 40vh;
+    height: 40%;
   }
 }
 
 
 .text-half {
-  align-items: center;
   padding-top: 30px;
   padding-left: 15%;
   padding-right: 15%;
@@ -87,12 +76,8 @@
 }
 
 .landing-info {
-  margin-top: 2em;
-  width: 70vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 100px;
+  display: block;
   text-align: center;
 }
 
@@ -105,6 +90,4 @@
 .landing-paragraph {
   font-style: italic;
   color: white;
-  margin-top: 0.5em;
-  margin-bottom: 4em;
 }

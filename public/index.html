@@ -31,18 +31,20 @@
     </header>
 
     <!-- landing -->
-      <div class="section" data-anchor="home">
+      <div class="section row" data-anchor="home">
         <section id="landingpage-first-half">
           <img class="header-img" src="assets/qsa.jpeg" alt="quaker social action logo" />
           <div class="landing-info">
-            <span class="landing-text">Welcome to Down to Earth <br> A project of Quaker Social Action</span>
+            <span class="landing-text">Welcome to Down to Earth <br> A project of Quaker Social Action</span><p>
+
+            </p>
             <span class="landing-paragraph">
               Plan the right send off without the big spend off
             </span>
           </div>
           <canvas id="landingpage-background"></canvas>
         </section>
-        <section id="landingpage-second-half">
+        <section class="row" id="landingpage-second-half">
           <div class="text-half">
             <h1 class="h1-title">SIMPLE FUNERAL PLANNER</h1>
             <p>
@@ -123,15 +125,13 @@
               <div class="bare__description">to their premises until the day of the cremation. She was taken to the crematorium by the funeral director and the cremation was carried out with no- one present. Mark collected her ashes and these were central at a gathering of family and friends who attended an event held in the couple’s garden to remember Sally."</div>
             </div>
           </div>
-          <div class="arrow__center">
-            <a href="#option1">
-              <svg id="bare__arrow" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-                <path d="M0-.75h24v24H0z" fill="none"/>
-              </svg>
-            </a>
+          <a class="landing-arrow-style" href="#info">
+            <svg class="landing-arrow-style" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+              <path d="M0-.75h24v24H0z" fill="none"/>
+            </svg>
+          </a>
           </div>
-        </div>
       </section>
 
       <!-- direct-cremation more info  -->
@@ -201,16 +201,17 @@
             <div class="bare__description">"To keep costs manageable, Mary took responsibility for arranging her mum’s funeral and chose a cremation at her local cemetery. People were coming from many different places to attend the funeral.</div>
           </div>
           <div class="userStory large-4 columns" data-equalizer-watch="bare">
+
             <div class="bare__description">They were all driving, so Mary decided that rather than people driving in convoy, they would meet together at the crematorium. Instead of paying for the optional limousine, Mary’s next-door neighbour offered to drive her to the service."<p><br><strong>Go to the next section to see avarage prices accorging to your region</strong></p></div>
+
           </div>
         </div>
-        <div class="arrow__center">
-          <a href="#option1">
-            <svg id="bare__arrow" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-              <path d="M0-.75h24v24H0z" fill="none"/>
-            </svg>
-          </a>
+        <a class="landing-arrow-style" href="#info">
+          <svg class="landing-arrow-style" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+            <path d="M0-.75h24v24H0z" fill="none"/>
+          </svg>
+        </a>
         </div>
       </div>
     </section>
@@ -734,16 +735,8 @@
           <div class="small-12 medium-7 columns map-info-wrapper">
             <h4 class="h4-title">Our estimate is that in <span id="displayed-region">London</span> the price is:</h4>
             <h3 class="h3-title" id="cost">£4263</h3>
-            <div id="arrow__center">
-              <a href="#extra-option">
-                <svg id="map__arrow" fill="#8D4B64" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-                  <path d="M0-.75h24v24H0z" fill="none"/>
-                </svg>
-              </a>
-            </div>
           </div>
-        </div>
+        </div>  
       </section>
       <!-- extra options page -->
       <section id="extraOptionPage" class="section options" data-anchor="extra-option" >
@@ -804,7 +797,7 @@
 
       </section>
       <!-- contact footer -->
-      <section class="last-page section options" data-anchor="contact">
+      <section class="section last-page options">
         <div class="contact-us">
           <a href="#"><h3 class="h3-title">Contact us</h3></a>
         </div>

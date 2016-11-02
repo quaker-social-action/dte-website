@@ -60,7 +60,11 @@ body {
 }
 
 .landing-arrow-style {
-  margin-top: 10px;
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
 // Helpers
