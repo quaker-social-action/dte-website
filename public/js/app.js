@@ -55,7 +55,7 @@ var granimInstance = new Granim({
           //Navigation
           menu: '#menu',
           lockAnchors: false,
-          anchors:['firstPage', 'secondPage'],
+          anchors:['home', 'options_page'],
           navigation: false,
           navigationPosition: 'right',
           navigationTooltips: ['firstSlide', 'secondSlide'],
