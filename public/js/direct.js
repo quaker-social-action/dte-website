@@ -10,12 +10,11 @@ $(document).ready(function() {
     showActiveTooltip: false,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
-    
+
   });
   var isMobile = function(){
     var width = document.body.scrollWidth;
     return width < 600;
-
   };
 });
 

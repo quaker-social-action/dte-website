@@ -32,25 +32,25 @@ function updatePurple(event) {
   calculateOptionCost();
 }
 
-  $(document).ready(function() {
-    
-      $('#fullpage').fullpage({
-          //Navigation
-          menu: '#menu',
-          lockAnchors: false,
-          anchors:['home', 'options_page'],
-          navigation: false,
-          navigationPosition: 'right',
-          navigationTooltips: ['firstSlide', 'secondSlide'],
-          showActiveTooltip: false,
-          slidesNavigation: true,
-          slidesNavPosition: 'bottom',
+$(document).ready(function() {
 
-      });
+  $('#fullpage').fullpage({
+    //Navigation
+    menu: '#menu',
+    lockAnchors: false,
+    anchors:['home', 'options_page'],
+    navigation: false,
+    navigationPosition: 'right',
+    navigationTooltips: ['firstSlide', 'secondSlide'],
+    showActiveTooltip: false,
+    slidesNavigation: true,
+    slidesNavPosition: 'bottom',
+
+  });
+
   var isMobile = function(){
     var width = document.body.scrollWidth;
     return width < 600;
-
   };
 });
 
