@@ -6,4 +6,4 @@ node_modules
 
 .swp
 
-stylesheet.css
+public/css/stylesheet.css
