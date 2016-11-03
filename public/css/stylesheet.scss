@@ -11,9 +11,6 @@
 @import './partials/_extraOption';
 @import './partials/_lastpage';
 
-* {
-  box-sizing: border-box;
-}
 ul {
     text-align: left;
 }
@@ -71,7 +68,7 @@ body {
 }
 
 .gradient {
-  
+
   background: linear-gradient(-20deg, #8D69A7 40%, #662f8c);
   background-size: 400% 400%;
 
@@ -98,6 +95,6 @@ body {
 
 // Helpers
 .hidden {
-  visibility: hidden;
-  display: none;
+  background-color: transparent;
+  // display: none;
 }
