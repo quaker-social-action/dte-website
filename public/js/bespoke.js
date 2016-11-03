@@ -15,7 +15,6 @@ $(document).ready(function() {
   var isMobile = function(){
     var width = document.body.scrollWidth;
     return width < 600;
-
   };
 });
 
