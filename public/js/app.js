@@ -1,5 +1,23 @@
 //Globals
 
+$(document).ready(function() {
+  var isMobile = function(){
+    var width = document.body.scrollWidth;
+    return width < 600;
+  };
+  
+  $(document).foundation();
+
+    $('#fullpage').fullpage({
+      //Navigation
+      menu: '.fixed-header',
+      lockAnchors: false,
+      anchors:['home', 'options_page'],
+      recordHistory: false,
+      fixedElements: '.navbar',
+
+    });
+});
 var costListItem = [].slice.call(document.getElementsByClassName('cost-list-item'));
 
 costListItem.map(function(el){
@@ -32,27 +50,7 @@ function updatePurple(event) {
   calculateOptionCost();
 }
 
-$(document).ready(function() {
 
-    $('#fullpage').fullpage({
-      //Navigation
-      menu: '#menu',
-      lockAnchors: false,
-      anchors:['home', 'options_page'],
-      navigation: false,
-      navigationPosition: 'right',
-      navigationTooltips: ['firstSlide', 'secondSlide'],
-      showActiveTooltip: false,
-      slidesNavigation: true,
-      slidesNavPosition: 'bottom',
-
-    });
-  var isMobile = function(){
-    var width = document.body.scrollWidth;
-    return width < 600;
-
-  };
-});
 
 
   // var btn = $('.route a');
