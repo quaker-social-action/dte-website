@@ -1,3 +1,4 @@
+var funeralSwitch = $('#funeral-switch').is(':checked');
 
 // TODO: this selector is ugly... but is nicer thant what we had before
 // this should be changed by a class at some point
@@ -113,7 +114,6 @@ function updatePurple(event) {
 //   // Hide all the option sections
 //   $('.section.options').hide();
 // });
-
 var regionCost = 4263;
 var optionCosts = 0;
 var cremation = true; //false if burial
