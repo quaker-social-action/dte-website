@@ -1,8 +1,8 @@
 $(function() {
   var regionOption = {
     Wales: {
-      c: 3348,
-      b: 4150,
+      cremation: 3348,
+      burial: 4150,
       ordersheet: 82,
       notice: 57,
       flowers: 167,
@@ -11,8 +11,8 @@ $(function() {
       limousine: 310
     },
     'the South East': {
-      c: 3633,
-      b: 4716,
+      cremation: 3633,
+      burial: 4716,
       ordersheet: 74,
       notice: 58,
       flowers: 141,
@@ -21,8 +21,8 @@ $(function() {
       limousine: 252
     },
     'London': {
-      c: 4263,
-      b: 6974,
+      cremation: 4263,
+      burial: 6974,
       ordersheet: 76,
       notice: 84,
       flowers: 171,
@@ -31,8 +31,8 @@ $(function() {
       limousine: 282
     },
     'the Midlands': {
-      c: 3377,
-      b: 4594,
+      cremation: 3377,
+      burial: 4594,
       ordersheet: 84,
       notice: 53,
       flowers: 159,
@@ -41,8 +41,8 @@ $(function() {
       limousine: 220
     },
     Yorkshire: {
-      c: 3526,
-      b: 4594,
+      cremation: 3526,
+      burial: 4594,
       ordersheet: 75,
       notice: 64,
       flowers: 135,
@@ -51,8 +51,8 @@ $(function() {
       limousine: 357
     },
     Scotland: {
-      c: 3322,
-      b: 4383,
+      cremation: 3322,
+      burial: 4383,
       ordersheet: 74,
       notice: 73,
       flowers: 166,
@@ -61,8 +61,8 @@ $(function() {
       limousine: 197
     },
     'the South West': {
-      c: 3749,
-      b: 4556,
+      cremation: 3749,
+      burial: 4556,
       ordersheet: 65,
       notice: 70,
       flowers: 147,
@@ -71,8 +71,8 @@ $(function() {
       limousine: 268
     },
     'the North': {
-      c: 3362,
-      b: 4305,
+      cremation: 3362,
+      burial: 4305,
       ordersheet: 54,
       notice: 63,
       flowers: 139,
@@ -81,8 +81,8 @@ $(function() {
       limousine: 168
     },
     'Northern Ireland': {
-      c: 3281,
-      b: 3524,
+      cremation: 3281,
+      burial: 3524,
       ordersheet: 73,
       notice: 76,
       flowers: 153,
@@ -92,32 +92,34 @@ $(function() {
     }
   };
 
-  var clickable = [].slice.call($('.clickable').children());
-  clickable.map(function(region) {
-    region.addEventListener('click', function(){
-      handleRegionClick(region.id);
-      clickable.map(function(el){
-        el.style.fill = '#9C6FC7';
-      });
-      region.style.fill = '#FFB88B';
-    });
-    region.addEventListener('mouseover', function(){
-      clickable.map(function(el){
-        if(el.style.fill === 'purple') {
-          el.style.fill = '#9C6FC7';
-        }
-      });
-      if(region.style.fill !== '#FFB88B') {
-        region.style.fill = 'purple';
-      }
-    });
-  });
+  var $clickableRegion = $('.clickable').children();
 
-  function handleRegionClick(region) {
+  $clickableRegion.click(handleRegionClick);
+  $clickableRegion.hover(handleRegionHover);
+
+  var selectedOptions = {};
+
+  function handleRegionClick() {
+    var region = $(this).attr('id');
+    $clickableRegion.css('fill', '#9C6FC7');
+    $(this).css('fill', '#FFB88B');
     $('#displayed-region').html(region);
-    calculateRegionCost(region, cremation);
-    regionName = region;
-    $('#cost').html('£' + (regionCost + optionCosts));
+    var cost = calculateCost(region, selectedOptions);
+    $('#cost').html('£' + cost);
   }
 
+  function handleRegionHover() {
+    if ($(this).css('fill') !== '#FFB88B') {
+      $clickableRegion.css('fill', '#9C6FC7');
+      $(this).css('fill', 'purple');
+    }
+  }
+
+  function calculateCost(region, options) {
+    var regionPrices = regionOption[region];
+    return Object.keys(options)
+      .reduce(function(price, option){
+        return price + regionPrices[option];
+      }, 0);
+  }
 });
