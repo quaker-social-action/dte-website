@@ -1,4 +1,5 @@
 
+
 //switch button on map page
 
 var switchButton = document.querySelector('.switch-button');
