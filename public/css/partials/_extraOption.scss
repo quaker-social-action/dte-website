@@ -1,0 +1,196 @@
+
+.extraOptions__subtitle {
+  font-size: 1em;
+  width: 400px;
+  float: right;
+
+}
+.extraOptions__title {
+  width: 560px;
+  color: #666;
+  text-transform: uppercase;
+  line-height: 0.72em !important;
+  font-size: 4em !important;
+}
+
+.extraOptions__header {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.extraOptions__description {
+  background-color: rgb(250, 246, 250);
+  padding: 2em 0 4em;
+}
+
+@media screen and (min-width: 64em) {
+  .extraOptions__header {
+    text-align: left;
+    height: 25vh;
+    text-align: initial;
+  }
+
+  .extraOptions__title {
+    display: inline-block;
+    font-size: 3.5em;
+    line-height: .75em;
+    width: 560px;
+
+    & strong {
+      display: block;
+    }
+  }
+
+  .extraOptions__subtitle {
+    float: right;
+    font-size: 1em;
+    width: 440px;
+  }
+
+  .extraOptions__descriptions {
+    box-sizing: border-box;
+    height: 75vh;
+  }
+}
+
+
+#extraOptionPage {
+    background-color: #FFFFFF;
+}
+
+.middle {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+#orderSheet {
+    background-image: url("../assets/purple_icons/order_sheets_icon.png");
+}
+
+#flowersIcon {
+    background-image: url("../assets/purple_icons/Flowers_icon.png");
+}
+
+#funeralIcon {
+    background-image: url("../assets/purple_icons/funeral_icon.png");
+}
+
+#venueIcon {
+    background-image: url("../assets/purple_icons/Venue_icon.png");
+}
+#cateringIcon {
+    background-image: url("../assets/purple_icons/Catering_icon.png");
+}
+#limoIcon {
+    background-image: url("../assets/purple_icons/Limo_icon.png");
+}
+
+.imageIcon {
+    height: 80%;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+.purpleBox {
+    height: 150px;
+    background-color: #6F2CA2;
+}
+
+.purpleBoxClicked {
+    border: 3px solid #D9BCE0;
+}
+
+.purpleBox:hover {
+    -webkit-box-shadow: -1px 4px 10px 2px rgba(133,133,133,1);
+    -moz-box-shadow: -1px 4px 10px 2px rgba(133,133,133,1);
+    box-shadow: -1px 4px 10px 2px rgba(133,133,133,1);
+    cursor: pointer;
+}
+
+.caption {
+    background-color: white;
+    font-size: 18px;
+    color: #4D4D4D;
+    text-align: left;
+    margin-top: 15px;
+    margin-right: 0;
+    padding-right: 0;
+    height: 40px;
+    border-bottom: 4px solid #E67842;
+    margin-bottom: 20px;
+}
+
+#addMore {
+    color: #4D4D4D;
+    position: absolute;
+    right: 10vw;
+    top: 8vh;
+    width: 30vw;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+#whatMore {
+    color: #4D4D4D;
+    position: absolute;
+    font-weight: 500;
+    left: 10vw;
+    top: 8vh;
+    width: 40vw;
+    font-size: 70px;
+    line-height: 54px;
+}
+
+@media (max-width: 600px) {
+    #whatMore {
+        font-size: 30px;
+        line-height: 28px;
+    }
+    #addMore {
+        font-size: 15px;
+        line-height: 17px;
+    }
+}
+
+.breakdown-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  text-align: left;
+}
+
+.cost-list {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  margin: 0.5em;
+}
+.list-item-wrapper {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cost-list-item {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .material-icons {
+    padding-right: 10px;
+    cursor: default!important;
+  }
+}

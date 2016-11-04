@@ -1,0 +1,103 @@
+@import './base/_fonts';
+@import './partials/_colors';
+@import './partials/_index';
+@import './partials/_option';
+@import './partials/_result';
+@import './partials/_infopage';
+@import './partials/_hdi';
+@import './partials/_map';
+@import './partials/_bare';
+@import './partials/_components';
+@import './partials/_extraOption';
+@import './partials/_lastpage';
+
+* {
+  box-sizing: border-box;
+}
+ul {
+    text-align: left;
+}
+
+body {
+  // font-family: $open-sans;
+  // font-family: $lato;
+  font-family: $roboto;
+  font-weight: 300;
+}
+
+.h1-title {
+  font-family: $lato;
+  font-weight: 400;
+}
+
+.h2-title {
+  font-family: $lato;
+  font-weight: 300;
+}
+
+.h3-title {
+  font-family: $lato;
+  font-weight: 200;
+  font-size: 32px;
+  color: $headers;
+  line-height: 44.8px;
+}
+
+.h4-title {
+  font-family: $lato;
+  font-weight: 200;
+  color: $headers;
+}
+
+.hdi-number {
+  color: $headers;
+}
+
+.userStory {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.captionBare {
+  font-size: 20px;
+}
+
+.landing-arrow-style {
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.gradient {
+  
+  background: linear-gradient(-20deg, #8D69A7 40%, #662f8c);
+  background-size: 400% 400%;
+
+  -webkit-animation: landingBackground 30s ease infinite;
+  -moz-animation: landingBackground 30s ease infinite;
+  animation: landingBackground 30s ease infinite;
+}
+
+@-webkit-keyframes landingBackground {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+@-moz-keyframes landingBackground {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+@keyframes landingBackground {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+
+// Helpers
+.hidden {
+  visibility: hidden;
+  display: none;
+}

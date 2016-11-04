@@ -1,0 +1,143 @@
+.map-options {
+  margin-top: 4em;
+}
+
+.map-reader {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #9c27b0;
+  color: white;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.map-title {
+  text-align: center;
+}
+.map-title-text {
+  padding-top: 5%;
+  margin: 0;
+}
+
+.card {
+  font-size: .8em;
+  padding: 1em;
+  border-bottom: 4px solid rgb(228, 96, 0);
+  background-color: white;
+}
+
+.map-description {
+  background-color: #e1bee7;
+  height: 100%;
+}
+
+.map-page-header {
+  background-color: $purple-header;
+  text-align: center;
+  height: 30vh;
+  color: white;
+}
+
+.map-page-header h3 {
+  color: white;
+}
+
+.info-section {
+  background-color: $background2;
+  height: 70vh;
+}
+
+.map-wrapper {
+  height: 70vh;
+  background-color: $background2;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.map {
+  height: 85%;
+}
+
+.map-info-wrapper {
+  height: 70vh;
+  text-align: center;
+  padding-top: 5em;
+}
+
+.map-cards {
+  padding-top: 2em;
+}
+
+.map-card {
+  background-color: white;
+
+  p:first-of-type {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+  p:last-of-type {
+    font-size: 1.2em;
+  }
+}
+
+#mapPage {
+  background-color: $background2;
+}
+
+@media (min-width: 768px) {
+  .map-reader {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+}
+.title-map {
+  margin-top: 60px;
+}
+.switch-slider {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+  input {
+    display:none;
+  }
+}
+
+.slider-box {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #caaedf;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider-box:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider-box {
+  background-color: #674a7f;
+}
+
+input:focus + .slider-box {
+  box-shadow: 0 0 1px #674a7f;
+}
+
+input:checked + .slider-box:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}

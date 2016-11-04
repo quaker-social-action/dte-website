@@ -1,0 +1,30 @@
+.last-page {
+background-color: #BF93CC;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 50%;
+  a {
+    color: white;
+  }
+}
+
+.social-media {
+  background-color: #4C235C;
+  height: 50%;
+  display: block;
+}
+
+.widgets {
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.widget {
+ margin: 20px;
+}
