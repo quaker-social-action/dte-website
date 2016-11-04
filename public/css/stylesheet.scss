@@ -11,9 +11,6 @@
 @import './partials/_extraOption';
 @import './partials/_lastpage';
 
-* {
-  box-sizing: border-box;
-}
 ul {
     text-align: left;
 }
@@ -98,6 +95,6 @@ body {
 
 // Helpers
 .hidden {
-  visibility: hidden;
-  display: none;
+  background-color: transparent;
+  // display: none;
 }
