@@ -1,4 +1,9 @@
-$(function(){
+// Default selected options
+window.selectedOptions = {
+  burial: true,
+};
+
+$(function(selectedOptions){
   //switch button on map page
   var $switchBtnRight = $('.switch-button-case.right');
   var $switchBtnLeft = $('.switch-button-case.left');
@@ -9,6 +14,9 @@ $(function(){
     $switchBtnLeft.addClass('active-case');
     // TODO: change this for a class
     $activeSwitch[0].style.left = '0%';
+
+    delete selectedOptions.burial;
+    selectedOptions.cremation = true;
   }
 
   function switchRight(){
@@ -17,6 +25,9 @@ $(function(){
     // TODO: change this for a class
     // don't change styles inline
     $activeSwitch[0].style.left = '50%';
+
+    delete selectedOptions.cremation;
+    selectedOptions.burial = true;
   }
 
   $switchBtnLeft.click(switchLeft);
@@ -32,5 +43,5 @@ $(function(){
     recordHistory: false,
     fixedElements: '.navbar',
   });
-});
+}(window.selectedOptions));
 

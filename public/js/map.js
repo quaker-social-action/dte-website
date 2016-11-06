@@ -1,4 +1,4 @@
-$(function() {
+$(function(selectedOptions) {
   var regionOption = {
     Wales: {
       cremation: 3348,
@@ -97,29 +97,32 @@ $(function() {
   $clickableRegion.click(handleRegionClick);
   $clickableRegion.hover(handleRegionHover);
 
-  var selectedOptions = {};
-
   function handleRegionClick() {
     var region = $(this).attr('id');
+    $clickableRegion.removeClass('selected');
     $clickableRegion.css('fill', '#9C6FC7');
+    $(this).addClass('selected');
     $(this).css('fill', '#FFB88B');
+
     $('#displayed-region').html(region);
     var cost = calculateCost(region, selectedOptions);
     $('#cost').html('£' + cost);
   }
 
   function handleRegionHover() {
-    if ($(this).css('fill') !== '#FFB88B') {
-      $clickableRegion.css('fill', '#9C6FC7');
-      $(this).css('fill', 'purple');
-    }
+    var $selected = $('.selected');
+    $clickableRegion.not($selected).css('fill', '#9C6FC7');
+    $(this).not($selected).css('fill', 'purple');
   }
 
   function calculateCost(region, options) {
     var regionPrices = regionOption[region];
     return Object.keys(options)
+      .filter(function(option){
+        return options[option];
+      })
       .reduce(function(price, option){
         return price + regionPrices[option];
       }, 0);
   }
-});
+}(window.selectedOptions));
