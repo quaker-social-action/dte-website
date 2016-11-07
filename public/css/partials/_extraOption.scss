@@ -1,10 +1,21 @@
+#extraOptionPage {
+  background-color: $light-pink-bg;
+}
+
+#extra-options-header-bg {
+background-color: $light-pink-bg;
+}
 
 .extraOptions__subtitle {
   font-size: 1em;
-  width: 400px;
-  float: right;
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 1.5;
   font-weight: 400;
 }
+
 .extraOptions__title {
   width: 420px;
   color: #666;
@@ -27,7 +38,7 @@
 
 @media screen and (min-width: 64em) {
   .extraOptions__header {
-    text-align: left;
+    text-align: center;
     height: 25vh;
     text-align: initial;
   }
@@ -36,17 +47,14 @@
     display: inline-block;
     font-size: 3em;
     line-height: .75em;
-    width: 420px;
+    width: 100%;
+    padding-top: 10px;
 
     & strong {
       display: block;
     }
-  }
-
-  .extraOptions__subtitle {
-    float: right;
-    font-size: 1em;
-    width: 440px;
+    text-align: center;
+    line-height: 61.8px;
   }
 
   .extraOptions__descriptions {
@@ -56,11 +64,14 @@
 }
 
 .overlay-item {
-
   background: rgba(174,163,179,0.77);
   position: relative;
-
+  transition: all 200ms ease-in;
+  &:active{
+    transform: scale(1.05);
+  }
 }
+
 .overlay-item.price {
   font-size: 20px;
   color: white;
@@ -83,6 +94,7 @@
   display: block;
   text-align: center;
 }
+
 .padded {
   margin: 0px;
 }
@@ -93,6 +105,14 @@
   margin-bottom: 20px;
   border: 1px solid #7C2EA4;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.24), 0px 0px 2px 0px rgba(0,0,0,0.12);
+  border-radius: 2px;
+  transition: all 200ms ease-in;
+  transform: scale(1);
+  &:hover{
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+  }
 }
 
 .purple-header {
@@ -101,15 +121,19 @@
   font-family: 'Lato';
   font-size: 18px;
   font-weight: 300;
-  color: #BE94D1;
+  color: #7C2EA4;
 }
 .caption {
   display: block;
   text-align: center;
   font-family: 'Lato';
   font-size: 12px;
-  color: #BE94D1;
+  color: #7C2EA4;
 }
+
+// .limousine {
+//
+// }
 
 #addMore {
     color: #4D4D4D;

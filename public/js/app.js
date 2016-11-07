@@ -102,6 +102,8 @@ $(function(window, Observable){
     anchors:['home', 'options_page'],
     recordHistory: false,
     fixedElements: '.navbar',
+    paddingTop: '0',
+    paddingBottom: '0',
   });
 
   // Default selected options
