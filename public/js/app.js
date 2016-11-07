@@ -91,43 +91,18 @@ $(function(window, Observable){
       limousine: 218
     }
   };
->>>>>>> 57440e4b453907a53d015f765674ccbc11f87868
 
-
-  function addToSummaryList() {
-    var boxClicked = $(this).attr('id');
-    var list = $('#dynamic-list');
-    var listItems = [];
-    // TODO: Don't let add item again if it's already in the array
-
-    switch (boxClicked) {
-    case 'purple0':
-      listItems.push('Order Sheets');
-      break;
-    case 'purple1':
-      listItems.push('Funeral notice');
-      break;
-    case 'purple2':
-      listItems.push('Flowers');
-      break;
-    case 'purple3':
-      listItems.push('Venue hire');
-      break;
-    case 'purple4':
-      listItems.push('Catering');
-      break;
-    case 'purple5':
-      listItems.push('Limousine');
-      break;
-    default:
-    }
-
-    listItems.map(function(el) {
-      list.append('<li>' + el + '</li>');
-    });
+  function handleOptionClick(){
+    $(this).find('.overlay-item').toggleClass('hidden', 400, 'easeOutSine');
+    $(this).find('.price').toggleClass('hide', 400, 'easeOutSine');
+    var isOn = $(this).find('.list-item-active').hasClass('hidden');
+    var itemName = $(this).data('item-name');
+    var itemPrice = regionOptions[selectedOptions.get('region')][itemName];
+    $(this).find('.price').html('£' + itemPrice);
+    selectedOptions.set(itemName, !isOn);
   }
 
-  $('.extra-option-item').click(addToSummaryList);
+  $('.extra-option-item').click(handleOptionClick);
 
   $(document).foundation();
 
@@ -146,26 +121,68 @@ $(function(window, Observable){
   var selectedOptions = new Observable({
     region: 'London',
     burial: true,
+    cremation: false,
+    ordersheet: false,
+    notice: false,
+    flowers: false,
+    venue: false,
+    catering: false,
+    limousine: false
   });
 
   selectedOptions.onChange(calculateCost);
+  selectedOptions.onChange(addToSummaryList);
+
 
   function calculateCost() {
     var _this = this;
     var region = _this.region;
     var regionPrices = regionOptions[region];
     var cost = Object.keys(_this)
-      .filter(function(option){
-        return option !== 'region' && _this[option];
-      })
-      .reduce(function(price, option){
-        return price + regionPrices[option];
-      }, 0);
+    .filter(function(option){
+      return option !== 'region' && _this[option];
+    })
+    .reduce(function(price, option){
+      return price + regionPrices[option];
+    }, 0);
 
     $('#displayed-region').html(region);
     $('#cost').html('£' + cost);
+    $('.cost-breakdown').html('£' + cost);
   }
 
-  window.selectedOptions = selectedOptions;
+  function addToSummaryList() {
 
+    var list = $('#dynamic-list');
+    var listItems = [];
+    // TODO: Map keys to string name to avoid this horriffic if statement
+    for(var key in this){
+      if(this[key] === true && key === 'ordersheet'){
+        listItems.push('Order Sheets');
+      }
+      if(this[key] === true && key === 'notice') {
+        listItems.push('Funeral notice');
+      }
+      if(this[key] === true && key === 'flowers') {
+        listItems.push('Flowers');
+      }
+      if(this[key] === true && key === 'venue') {
+        listItems.push('Venue Hire');
+      }
+      if(this[key] === true && key === 'catering') {
+        listItems.push('Catering');
+      }
+      if(this[key] === true && key === 'limousine') {
+        listItems.push('Limousine');
+      }
+    }
+    list.html('');
+    listItems.map(function(el) {
+      list.append('<li>' + el + '</li>');
+    });
+  }
+
+  selectedOptions._fireHandlers();
+  // console.log(regionOptions[selectedOptions._props.region]);
+  window.selectedOptions = selectedOptions;
 }(window, window.Observable));

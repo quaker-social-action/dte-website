@@ -20,19 +20,4 @@ $(function(selectedOptions) {
     $(this).not($selected).css('fill', 'purple');
   }
 
-<<<<<<< HEAD
-  function calculateCost(region, options) {
-    var regionPrices = regionOption[region];
-
-    return Object.keys(options)
-      .filter(function(option){
-        return options[option];
-      })
-      .reduce(function(price, option){
-        return price + regionPrices[option];
-      }, 0);
-  }
-
-=======
->>>>>>> 57440e4b453907a53d015f765674ccbc11f87868
 }(window.selectedOptions));
