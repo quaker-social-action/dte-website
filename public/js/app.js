@@ -15,7 +15,8 @@ $(document).ready(function() {
     anchors:['home', 'options_page'],
     recordHistory: false,
     fixedElements: '.navbar',
-
+    paddingTop: '0px',
+    paddingBottom: '0px',
   });
 
 });

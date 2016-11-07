@@ -1,7 +1,15 @@
+#extraOptionPage {
+  background-color: rgba(245, 234, 245, 30);
+}
+
 .extra-options-background {
   background-color: rgba(245, 234, 245, 30);
   z-index: -1;
   padding-top: 20px;
+}
+
+#extra-options-header-bg {
+background-color: white; 
 }
 
 .extraOptions__subtitle {
@@ -91,6 +99,7 @@
   display: block;
   text-align: center;
 }
+
 .padded {
   margin: 0px;
 }
@@ -117,15 +126,19 @@
   font-family: 'Lato';
   font-size: 18px;
   font-weight: 300;
-  color: #BE94D1;
+  color: #7C2EA4;
 }
 .caption {
   display: block;
   text-align: center;
   font-family: 'Lato';
   font-size: 12px;
-  color: #BE94D1;
+  color: #7C2EA4;
 }
+
+// .limousine {
+//
+// }
 
 #addMore {
     color: #4D4D4D;
@@ -197,6 +210,6 @@
   }
 }
 
-.arrow-extra {
-  z-index: 999;
+#arrow-extra {
+  bottom: 40px;
 }
