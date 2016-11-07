@@ -1,43 +1,98 @@
-// Default selected options
-window.selectedOptions = {
-  burial: true,
-  cremation: false,
-};
+$(function(window, Observable){
+  var regionOptions = {
+    Wales: {
+      cremation: 3348,
+      burial: 4150,
+      ordersheet: 82,
+      notice: 57,
+      flowers: 167,
+      venue: 311,
+      catering: 271,
+      limousine: 310
+    },
+    'the South East': {
+      cremation: 3633,
+      burial: 4716,
+      ordersheet: 74,
+      notice: 58,
+      flowers: 141,
+      venue: 182,
+      catering: 403,
+      limousine: 252
+    },
+    'London': {
+      cremation: 4263,
+      burial: 6974,
+      ordersheet: 76,
+      notice: 84,
+      flowers: 171,
+      venue: 313,
+      catering: 662,
+      limousine: 282
+    },
+    'the Midlands': {
+      cremation: 3377,
+      burial: 4594,
+      ordersheet: 84,
+      notice: 53,
+      flowers: 159,
+      venue: 178,
+      catering: 352,
+      limousine: 220
+    },
+    Yorkshire: {
+      cremation: 3526,
+      burial: 4594,
+      ordersheet: 75,
+      notice: 64,
+      flowers: 135,
+      venue: 147,
+      catering: 345,
+      limousine: 357
+    },
+    Scotland: {
+      cremation: 3322,
+      burial: 4383,
+      ordersheet: 74,
+      notice: 73,
+      flowers: 166,
+      venue: 214,
+      catering: 390,
+      limousine: 197
+    },
+    'the South West': {
+      cremation: 3749,
+      burial: 4556,
+      ordersheet: 65,
+      notice: 70,
+      flowers: 147,
+      venue: 195,
+      catering: 534,
+      limousine: 268
+    },
+    'the North': {
+      cremation: 3362,
+      burial: 4305,
+      ordersheet: 54,
+      notice: 63,
+      flowers: 139,
+      venue: 126,
+      catering: 304,
+      limousine: 168
+    },
+    'Northern Ireland': {
+      cremation: 3281,
+      burial: 3524,
+      ordersheet: 73,
+      notice: 76,
+      flowers: 153,
+      venue: 108,
+      catering: 279,
+      limousine: 218
+    }
+  };
+>>>>>>> 57440e4b453907a53d015f765674ccbc11f87868
 
-$(function(selectedOptions){
-  //switch button on map page
-  var $switchBtnRight = $('.switch-button-case.right');
-  var $switchBtnLeft = $('.switch-button-case.left');
-  var $activeSwitch = $('.active');
-
-  function switchLeft(){
-    console.log('left');
-    $switchBtnRight.removeClass('active-case');
-    $switchBtnLeft.addClass('active-case');
-    // TODO: change this for a class
-    $activeSwitch[0].style.left = '0%';
-
-    // delete selectedOptions.cremation;
-    window.selectedOptions.cremation = false;
-    window.selectedOptions.burial = true;
-  }
-
-  function switchRight(){
-    console.log('right');
-    $switchBtnRight.addClass('active-case');
-    $switchBtnLeft.removeClass('active-case');
-    // TODO: change this for a class
-    // don't change styles inline
-    $activeSwitch[0].style.left = '50%';
-
-    // delete selectedOptions.cremation;
-    window.selectedOptions.burial = false;
-    window.selectedOptions.cremation = true;
-
-  }
-
-  $switchBtnLeft.click(switchLeft);
-  $switchBtnRight.click(switchRight);
 
   function addToSummaryList() {
     var boxClicked = $(this).attr('id');
@@ -71,7 +126,7 @@ $(function(selectedOptions){
       list.append('<li>' + el + '</li>');
     });
   }
-  
+
   $('.extra-option-item').click(addToSummaryList);
 
   $(document).foundation();
@@ -86,4 +141,31 @@ $(function(selectedOptions){
     paddingTop: '0',
     paddingBottom: '0',
   });
-}(window.selectedOptions));
+
+  // Default selected options
+  var selectedOptions = new Observable({
+    region: 'London',
+    burial: true,
+  });
+
+  selectedOptions.onChange(calculateCost);
+
+  function calculateCost() {
+    var _this = this;
+    var region = _this.region;
+    var regionPrices = regionOptions[region];
+    var cost = Object.keys(_this)
+      .filter(function(option){
+        return option !== 'region' && _this[option];
+      })
+      .reduce(function(price, option){
+        return price + regionPrices[option];
+      }, 0);
+
+    $('#displayed-region').html(region);
+    $('#cost').html('£' + cost);
+  }
+
+  window.selectedOptions = selectedOptions;
+
+}(window, window.Observable));
