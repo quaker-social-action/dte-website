@@ -67,14 +67,43 @@ h3 {
   font-size: 20px;
 }
 
-.landing-arrow-style {
+// arrow
+.arrow-style {
   width: 100%;
   position: absolute;
+  text-align: center;
   margin: 0 auto;
   left: 0;
   right: 0;
   z-index: 999;
+
+  @media (max-height: 770px) {
+    margin-top: -9px;
+    margin-bottom: -9px;
+  }
 }
+
+.bounce {
+  animation: bounce 2s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+}
+
+.bounce:hover {
+}
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
+
 
 .gradient {
 
@@ -109,4 +138,8 @@ h3 {
 }
 .hide {
   visibility: hidden;
+}
+
+.fp-tableCell {
+  display: block;
 }

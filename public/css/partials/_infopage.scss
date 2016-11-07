@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.info-page-wrapper {
+position: relative;
+}
+
+.option-wrapper {
+  height: 600px;
+  position: absolute;
+  padding-top: 15%;
+  left: 0;
+  right: 0;
+}
+
 .round-image {
   margin-top: 20px;
 }
