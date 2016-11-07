@@ -5,7 +5,6 @@
 }
 
 .bare__title {
-  margin-top: .5em;
   color: #666;
   text-transform: uppercase;
 
@@ -42,14 +41,11 @@
   }
 }
 
-.bare__subtitle {
-  margin-top: 1em;
-}
 
 .bare__descriptions {
   background-color: rgb(250, 246, 250);
   padding: 2em 0 4em;
-  height: 50%;
+  height: 100%;
 }
 
 .bare__description {
@@ -64,7 +60,7 @@
 @media screen and (min-width: 64em) {
   .bare__descriptions {
     box-sizing: border-box;
-    height: 55%;
+    height: 61%;
   }
 }
 

@@ -44,4 +44,3 @@ $(function(selectedOptions){
     fixedElements: '.navbar',
   });
 }(window.selectedOptions));
-
