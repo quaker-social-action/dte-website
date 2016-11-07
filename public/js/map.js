@@ -117,6 +117,7 @@ $(function(selectedOptions) {
 
   function calculateCost(region, options) {
     var regionPrices = regionOption[region];
+
     return Object.keys(options)
       .filter(function(option){
         return options[option];
@@ -125,4 +126,5 @@ $(function(selectedOptions) {
         return price + regionPrices[option];
       }, 0);
   }
+
 }(window.selectedOptions));
