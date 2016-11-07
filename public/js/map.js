@@ -1,254 +1,128 @@
-$(document).ready(function() {
-  var overlay = $('.overlay-item');
-  var overlayPrice = $('overlay-item.price');
-
-  overlay.click(function() {
-    $(this).toggleClass('hidden', 400, "easeOutSine");
-    $(this).find('.price').toggleClass('hide', 400, "easeOutSine");
-    updatePurple(event);
-  });
-  // TODO: this selector is ugly... but is nicer thant what we had before
-  // this should be changed by a class at some point
-  $('[id^=#purple]').click(function() {
-    $(this).toggleClass('purpleBoxClicked');
-
-    // TODO: WTF is this number?
-    var number = $(this).attr('id').replace(/\D/g, '');
-
-    updateList(number);
-    calculateOptionCost();
-    $('#cost').html('£' + (regionCost + optionCosts));
-    $('#cost-breakdown').html('£' + (regionCost + optionCosts));
-  });
-  function updateList(number) {
-    var id = 'list' + number;
-    // TODO: never change the style with JS. We can just add classes!
-    if (document.getElementById(id).style.textDecoration === 'line-through') {
-      document.getElementById(id).style.textDecoration = 'none';
-      document.getElementById(id).childNodes[0].innerHTML = 'done';
-    } else {
-      document.getElementById(id).style.textDecoration = 'line-through';
-      document.getElementById(id).childNodes[0].innerHTML = 'clear';
+$(function(selectedOptions) {
+  var regionOption = {
+    Wales: {
+      cremation: 3348,
+      burial: 4150,
+      ordersheet: 82,
+      notice: 57,
+      flowers: 167,
+      venue: 311,
+      catering: 271,
+      limousine: 310
+    },
+    'the South East': {
+      cremation: 3633,
+      burial: 4716,
+      ordersheet: 74,
+      notice: 58,
+      flowers: 141,
+      venue: 182,
+      catering: 403,
+      limousine: 252
+    },
+    'London': {
+      cremation: 4263,
+      burial: 6974,
+      ordersheet: 76,
+      notice: 84,
+      flowers: 171,
+      venue: 313,
+      catering: 662,
+      limousine: 282
+    },
+    'the Midlands': {
+      cremation: 3377,
+      burial: 4594,
+      ordersheet: 84,
+      notice: 53,
+      flowers: 159,
+      venue: 178,
+      catering: 352,
+      limousine: 220
+    },
+    Yorkshire: {
+      cremation: 3526,
+      burial: 4594,
+      ordersheet: 75,
+      notice: 64,
+      flowers: 135,
+      venue: 147,
+      catering: 345,
+      limousine: 357
+    },
+    Scotland: {
+      cremation: 3322,
+      burial: 4383,
+      ordersheet: 74,
+      notice: 73,
+      flowers: 166,
+      venue: 214,
+      catering: 390,
+      limousine: 197
+    },
+    'the South West': {
+      cremation: 3749,
+      burial: 4556,
+      ordersheet: 65,
+      notice: 70,
+      flowers: 147,
+      venue: 195,
+      catering: 534,
+      limousine: 268
+    },
+    'the North': {
+      cremation: 3362,
+      burial: 4305,
+      ordersheet: 54,
+      notice: 63,
+      flowers: 139,
+      venue: 126,
+      catering: 304,
+      limousine: 168
+    },
+    'Northern Ireland': {
+      cremation: 3281,
+      burial: 3524,
+      ordersheet: 73,
+      notice: 76,
+      flowers: 153,
+      venue: 108,
+      catering: 279,
+      limousine: 218
     }
-    updatePurple(event);
-    }
-});
+  };
 
+  var $clickableRegion = $('.clickable').children();
 
-var costListItem = [].slice.call(document.getElementsByClassName('cost-list-item'));
+  $clickableRegion.click(handleRegionClick);
+  $clickableRegion.hover(handleRegionHover);
 
-costListItem.map(function(el){
-  el.addEventListener('click', function(event){
-    if (event.target.tagName === 'I') {
-      return;
-    }
-    if (event.target.style.textDecoration === 'line-through') {
-      event.target.style.textDecoration = 'none';
-      event.target.childNodes[0].innerHTML = 'done';
-      updatePurple(event);
-    } else {
-      event.target.style.textDecoration = 'line-through';
-      event.target.childNodes[0].innerHTML = 'clear';
-      updatePurple(event);
-    }
-  });
-});
+  function handleRegionClick() {
+    var region = $(this).attr('id');
+    $clickableRegion.removeClass('selected');
+    $clickableRegion.css('fill', '#9C6FC7');
+    $(this).addClass('selected');
+    $(this).css('fill', '#FFB88B');
 
-function updatePurple(event) {
-  var id = event.target.id;
-  var number = id[4];
-  var purple = '#purple' + number;
-  if ($(purple).hasClass('purpleBoxClicked')) {
-    $(purple).removeClass('purpleBoxClicked');
-  } else {
-    $(purple).addClass('purpleBoxClicked');
+    $('#displayed-region').html(region);
+    var cost = calculateCost(region, selectedOptions);
+    $('#cost').html('£' + cost);
   }
-  calculateOptionCost();
-}
 
-var switchButton = document.querySelector('.switch-button');
-var switchBtnRight = document.querySelector('.switch-button-case.right');
-var switchBtnLeft = document.querySelector('.switch-button-case.left');
-var activeSwitch = document.querySelector('.active');
-
-
-function switchLeft(){
-  switchBtnRight.classList.remove('active-case');
-  switchBtnLeft.classList.add('active-case');
-  activeSwitch.style.left = '0%';
-}
-
-function switchRight(){
-  switchBtnRight.classList.add('active-case');
-  switchBtnLeft.classList.remove('active-case');
-  activeSwitch.style.left = '50%';
-}
-
-switchBtnLeft.addEventListener('click', function(){
-  switchLeft();
-  cremation = false;
-});
-switchBtnRight.addEventListener('click', function(){
-  switchRight();
-  cremation = true;
-});
-
-var regionCost = 4263;
-var optionCosts = 0;
-var cremation = true; //false if burial
-var regionName = 'London';
-
-var regionOption = {
-  Wales: {
-    c: 3348,
-    b: 4150,
-    ordersheet: 82,
-    notice: 57,
-    flowers: 167,
-    venue: 311,
-    catering: 271,
-    limousine: 310
-  },
-  'the South East': {
-    c: 3633,
-    b: 4716,
-    ordersheet: 74,
-    notice: 58,
-    flowers: 141,
-    venue: 182,
-    catering: 403,
-    limousine: 252
-  },
-  'London': {
-    c: 4263,
-    b: 6974,
-    ordersheet: 76,
-    notice: 84,
-    flowers: 171,
-    venue: 313,
-    catering: 662,
-    limousine: 282
-  },
-  'the Midlands': {
-    c: 3377,
-    b: 4594,
-    ordersheet: 84,
-    notice: 53,
-    flowers: 159,
-    venue: 178,
-    catering: 352,
-    limousine: 220
-  },
-  Yorkshire: {
-    c: 3526,
-    b: 4594,
-    ordersheet: 75,
-    notice: 64,
-    flowers: 135,
-    venue: 147,
-    catering: 345,
-    limousine: 357
-  },
-  Scotland: {
-    c: 3322,
-    b: 4383,
-    ordersheet: 74,
-    notice: 73,
-    flowers: 166,
-    venue: 214,
-    catering: 390,
-    limousine: 197
-  },
-  'the South West': {
-    c: 3749,
-    b: 4556,
-    ordersheet: 65,
-    notice: 70,
-    flowers: 147,
-    venue: 195,
-    catering: 534,
-    limousine: 268
-  },
-  'the North': {
-    c: 3362,
-    b: 4305,
-    ordersheet: 54,
-    notice: 63,
-    flowers: 139,
-    venue: 126,
-    catering: 304,
-    limousine: 168
-  },
-  'Northern Ireland': {
-    c: 3281,
-    b: 3524,
-    ordersheet: 73,
-    notice: 76,
-    flowers: 153,
-    venue: 108,
-    catering: 279,
-    limousine: 218
+  function handleRegionHover() {
+    var $selected = $('.selected');
+    $clickableRegion.not($selected).css('fill', '#9C6FC7');
+    $(this).not($selected).css('fill', 'purple');
   }
-};
 
-var clickable = [].slice.call($('.clickable').children());
-clickable.map(function(region) {
-  region.addEventListener('click', function(){
-    handleRegionClick(region.id);
-    clickable.map(function(el){
-      el.style.fill = '#9C6FC7';
-    });
-    region.style.fill = '#FFB88B';
-  });
-  region.addEventListener('mouseover', function(){
-    clickable.map(function(el){
-      if(el.style.fill === 'purple') {
-        el.style.fill = '#9C6FC7';
-      }
-    });
-    if(region.style.fill !== '#FFB88B') {
-      region.style.fill = 'purple';
-    }
-  });
-});
-
-function handleRegionClick(region) {
-  $('#displayed-region').html(region);
-  calculateRegionCost(region, cremation);
-  regionName = region;
-  $('#cost').html('£' + (regionCost + optionCosts));
-}
-
-function calculateRegionCost(region, cremation) {
-  var cb;
-  if (cremation === true) {
-    cb = 'c';
-  } else {
-    cb = 'b';
+  function calculateCost(region, options) {
+    var regionPrices = regionOption[region];
+    return Object.keys(options)
+      .filter(function(option){
+        return options[option];
+      })
+      .reduce(function(price, option){
+        return price + regionPrices[option];
+      }, 0);
   }
-  regionCost = regionOption[region][cb];
-  calculateOptionCost();
-}
-
-
-function calculateOptionCost(){
-  optionCosts = 0;
-  if ($('#purple0').hasClass('purpleBoxClicked')) {
-    optionCosts += regionOption[regionName].ordersheet;
-  }
-  if ($('#purple1').hasClass('purpleBoxClicked')) {
-    optionCosts += regionOption[regionName].notice;
-  }
-  if ($('#purple2').hasClass('purpleBoxClicked')) {
-    optionCosts += regionOption[regionName].flowers;
-  }
-  if ($('#purple3').hasClass('purpleBoxClicked')) {
-    optionCosts += regionOption[regionName].venue;
-  }
-  if ($('#purple4').hasClass('purpleBoxClicked')) {
-    optionCosts += regionOption[regionName].catering;
-  }
-  if ($('#purple5').hasClass('purpleBoxClicked')) {
-    optionCosts += regionOption[regionName].limousine;
-  }
-}
+}(window.selectedOptions));

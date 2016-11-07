@@ -1,9 +1,37 @@
-$(document).ready(function() {
+// Default selected options
+window.selectedOptions = {
+  burial: true,
+};
 
-  var isMobile = function(){
-    var width = document.body.scrollWidth;
-    return width < 600;
-  };
+$(function(selectedOptions){
+  //switch button on map page
+  var $switchBtnRight = $('.switch-button-case.right');
+  var $switchBtnLeft = $('.switch-button-case.left');
+  var $activeSwitch = $('.active');
+
+  function switchLeft(){
+    $switchBtnRight.removeClass('active-case');
+    $switchBtnLeft.addClass('active-case');
+    // TODO: change this for a class
+    $activeSwitch[0].style.left = '0%';
+
+    delete selectedOptions.burial;
+    selectedOptions.cremation = true;
+  }
+
+  function switchRight(){
+    $switchBtnRight.addClass('active-case');
+    $switchBtnLeft.removeClass('active-case');
+    // TODO: change this for a class
+    // don't change styles inline
+    $activeSwitch[0].style.left = '50%';
+
+    delete selectedOptions.cremation;
+    selectedOptions.burial = true;
+  }
+
+  $switchBtnLeft.click(switchLeft);
+  $switchBtnRight.click(switchRight);
 
   $(document).foundation();
 
@@ -14,7 +42,5 @@ $(document).ready(function() {
     anchors:['home', 'options_page'],
     recordHistory: false,
     fixedElements: '.navbar',
-
   });
-
-});
+}(window.selectedOptions));
