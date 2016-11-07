@@ -1,3 +1,16 @@
+#extraOptionPage {
+  background-color: rgba(245, 234, 245, 30);
+}
+
+.extra-options-background {
+  background-color: rgba(245, 234, 245, 30);
+  z-index: -1;
+  padding-top: 20px;
+}
+
+#extra-options-header-bg {
+background-color: white;
+}
 
 .extraOptions__subtitle {
   font-size: 1em;
@@ -56,11 +69,14 @@
 }
 
 .overlay-item {
-
   background: rgba(174,163,179,0.77);
   position: relative;
-
+  transition: all 200ms ease-in;
+  &:active{
+    transform: scale(1.05);
+  }
 }
+
 .overlay-item.price {
   font-size: 20px;
   color: white;
@@ -83,6 +99,7 @@
   display: block;
   text-align: center;
 }
+
 .padded {
   margin: 0px;
 }
@@ -93,6 +110,14 @@
   margin-bottom: 20px;
   border: 1px solid #7C2EA4;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.24), 0px 0px 2px 0px rgba(0,0,0,0.12);
+  border-radius: 2px;
+  transition: all 200ms ease-in;
+  transform: scale(1);
+  &:hover{
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+  }
 }
 
 .purple-header {
@@ -101,15 +126,19 @@
   font-family: 'Lato';
   font-size: 18px;
   font-weight: 300;
-  color: #BE94D1;
+  color: #7C2EA4;
 }
 .caption {
   display: block;
   text-align: center;
   font-family: 'Lato';
   font-size: 12px;
-  color: #BE94D1;
+  color: #7C2EA4;
 }
+
+// .limousine {
+//
+// }
 
 #addMore {
     color: #4D4D4D;
@@ -179,4 +208,8 @@
     padding-right: 10px;
     cursor: default!important;
   }
+}
+
+.fp-tableCell {
+  display: block;
 }

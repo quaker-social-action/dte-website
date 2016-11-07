@@ -22,9 +22,17 @@ body {
   font-weight: 300;
 }
 
+h3 {
+  font-weight: 300;
+}
+
 .h1-title {
   font-family: $lato;
   font-weight: 400;
+  p:nth-child(2){
+    font-weight: bold;
+  }
+
 }
 
 .h2-title {
@@ -65,6 +73,7 @@ body {
   margin: 0 auto;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 
 .gradient {
