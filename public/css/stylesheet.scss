@@ -26,6 +26,11 @@ h3 {
   font-weight: 300;
 }
 
+.bold {
+color: #666;
+font-weight: bold;
+}
+
 .h1-title {
   font-family: $lato;
   font-weight: 400;
@@ -86,7 +91,7 @@ h3 {
 .bounce {
   animation: bounce 2s;
   animation-delay: 2s;
-  animation-iteration-count: 3;
+  animation-iteration-count: 5;
 }
 
 .bounce:hover {
