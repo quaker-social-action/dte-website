@@ -42,8 +42,7 @@ $(function(selectedOptions){
     anchors:['home', 'options_page'],
     recordHistory: false,
     fixedElements: '.navbar',
-    paddingTop: '0px',
-    paddingBottom: '0px',
-    controlArrows: true,
+    paddingTop: '0',
+    paddingBottom: '0',
   });
 }(window.selectedOptions));
