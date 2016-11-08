@@ -23,6 +23,21 @@
   top: 15px;
 }
 
+//responsive nav
+.no-js .fixed-header {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .fixed-header {
+    display: block;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
+}
+
 .fixed-header-links {
   font-weight: 600;
   display: inline;
