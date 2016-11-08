@@ -106,8 +106,8 @@ $(function(window, Observable){
 
   $(document).foundation();
 
+
   $('#fullpage').fullpage({
-    //Navigation
     menu: '.fixed-header',
     lockAnchors: false,
     anchors:['home', 'options_page'],
@@ -115,6 +115,10 @@ $(function(window, Observable){
     fixedElements: '.navbar',
     paddingTop: '0',
     paddingBottom: '0',
+    responsiveWidth: '1050',
+    animateAnchor: false,
+    scrollBar: true,
+    
   });
 
   // Default selected options
@@ -183,6 +187,5 @@ $(function(window, Observable){
   }
 
   selectedOptions._fireHandlers();
-  // console.log(regionOptions[selectedOptions._props.region]);
   window.selectedOptions = selectedOptions;
 }(window, window.Observable));
