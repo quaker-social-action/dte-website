@@ -117,7 +117,6 @@ $(function(window, Observable){
     paddingBottom: '0',
     responsiveWidth: '1050',
     animateAnchor: false,
-    scrollBar: true,
 
   });
 
