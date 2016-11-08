@@ -24,6 +24,10 @@ background-color: $light-pink-bg;
   font-size: 3em;
   font-weight: 300px;
 
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+
 }
 
 .extraOptions__header {
@@ -69,7 +73,7 @@ background-color: $light-pink-bg;
 
   &:active{
     transform: scale(1.05);
-    
+
   }
 }
 
