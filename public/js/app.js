@@ -118,7 +118,7 @@ $(function(window, Observable){
     responsiveWidth: '1050',
     animateAnchor: false,
     scrollBar: true,
-    
+
   });
 
   // Default selected options
@@ -186,6 +186,7 @@ $(function(window, Observable){
     });
   }
 
-  selectedOptions._fireHandlers();
+  selectedOptions.set('init');
+
   window.selectedOptions = selectedOptions;
 }(window, window.Observable));
