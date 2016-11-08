@@ -2,7 +2,7 @@ $(function(selectedOptions){
   //switch button on map page
   var $switchBtnRight = $('.switch-button-case.right');
   var $switchBtnLeft = $('.switch-button-case.left');
-  var $activeSwitch = $('.active');
+  var $activeSwitch = $('.active-switch');
 
   function switchLeft(){
     $switchBtnRight.removeClass('active-case');
@@ -10,8 +10,8 @@ $(function(selectedOptions){
     // TODO: change this for a class
     $activeSwitch.css('left', '0%');
 
-    selectedOptions.set('burial', false);
-    selectedOptions.set('cremation', true);
+    selectedOptions.set('burial', true);
+    selectedOptions.set('cremation', false);
   }
 
   function switchRight(){
@@ -21,8 +21,8 @@ $(function(selectedOptions){
     // don't change styles inline
     $activeSwitch.css('left', '50%');
 
-    selectedOptions.set('cremation', false);
-    selectedOptions.set('burial', true);
+    selectedOptions.set('cremation', true);
+    selectedOptions.set('burial', false);
   }
 
   $switchBtnLeft.click(switchLeft);
