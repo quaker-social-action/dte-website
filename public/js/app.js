@@ -106,6 +106,9 @@ $(function(window, Observable){
 
   $(document).foundation();
 
+  var elem = new Foundation.ResponsiveToggle($('.title-bar', null));
+  $('#navbar').foundation('toggleMenu');
+
   $('#fullpage').fullpage({
     //Navigation
     menu: '.fixed-header',
