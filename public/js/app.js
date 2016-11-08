@@ -106,9 +106,6 @@ $(function(window, Observable){
 
   $(document).foundation();
 
-  var elem = new Foundation.ResponsiveToggle($('.title-bar', null));
-  // $('#navbar').foundation('toggleMenu');
-
 
   $('#fullpage').fullpage({
     menu: '.fixed-header',
@@ -120,8 +117,6 @@ $(function(window, Observable){
     paddingBottom: '0',
     responsiveWidth: '1050',
     animateAnchor: false,
-    scrollBar: true,
-
   });
 
   // Default selected options
@@ -139,7 +134,6 @@ $(function(window, Observable){
 
   selectedOptions.onChange(calculateCost);
   selectedOptions.onChange(addToSummaryList);
-
 
   function calculateCost() {
     var _this = this;
