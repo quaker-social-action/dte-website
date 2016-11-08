@@ -14,8 +14,7 @@ ul {
 }
 
 body {
-  // font-family: $open-sans;
-  // font-family: $lato;
+  overflow: hidden;
   font-family: $roboto;
   font-weight: 300;
 }
@@ -80,9 +79,8 @@ font-weight: bold;
   right: 0;
   z-index: 999;
 
-  @media (max-height: 770px) {
-    margin-top: -9px;
-    margin-bottom: -9px;
+  @media screen and (max-width: 1020px) {
+    display: none;
   }
 }
 
@@ -110,7 +108,7 @@ font-weight: bold;
 
 .gradient {
 
-  background: linear-gradient(-20deg, #8D69A7 40%, #662f8c);
+  background: linear-gradient(-20deg, #662f8c 50%, #cfc0db);
   background-size: 400% 400%;
 
   -webkit-animation: landingBackground 30s ease infinite;
