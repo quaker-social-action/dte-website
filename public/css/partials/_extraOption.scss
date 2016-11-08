@@ -66,8 +66,10 @@ background-color: $light-pink-bg;
   background: rgba(174,163,179,0.77);
   position: relative;
   transition: all 200ms ease-in;
+
   &:active{
     transform: scale(1.05);
+    
   }
 }
 

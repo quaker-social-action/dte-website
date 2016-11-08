@@ -2,7 +2,7 @@ $(function(selectedOptions){
   //switch button on map page
   var $switchBtnRight = $('.switch-button-case.right');
   var $switchBtnLeft = $('.switch-button-case.left');
-  var $activeSwitch = $('.active');
+  var $activeSwitch = $('.active-switch');
 
   function switchLeft(){
     $switchBtnRight.removeClass('active-case');

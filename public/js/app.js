@@ -109,8 +109,8 @@ $(function(window, Observable){
   var elem = new Foundation.ResponsiveToggle($('.title-bar', null));
   // $('#navbar').foundation('toggleMenu');
 
+
   $('#fullpage').fullpage({
-    //Navigation
     menu: '.fixed-header',
     lockAnchors: false,
     anchors:['home', 'options_page'],
@@ -118,6 +118,10 @@ $(function(window, Observable){
     fixedElements: '.navbar',
     paddingTop: '0',
     paddingBottom: '0',
+    responsiveWidth: '1050',
+    animateAnchor: false,
+    scrollBar: true,
+
   });
 
   // Default selected options
@@ -185,7 +189,7 @@ $(function(window, Observable){
     });
   }
 
-  selectedOptions._fireHandlers();
-  // console.log(regionOptions[selectedOptions._props.region]);
+  selectedOptions.set('init');
+
   window.selectedOptions = selectedOptions;
 }(window, window.Observable));
