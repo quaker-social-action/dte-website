@@ -28,6 +28,7 @@
   display: none;
 }
 
+//when desktop view and no js, hide menu
 @media screen and (min-width: 40em) {
   .no-js .fixed-header {
     display: block;
