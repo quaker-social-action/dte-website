@@ -21,20 +21,11 @@
   z-index: 9999;
   position: absolute;
   top: 15px;
-}
 
-//responsive nav
-.no-js .fixed-header {
-  display: none;
-}
-
-@media screen and (min-width: 40em) {
-  .no-js .fixed-header {
-    display: block;
-  }
-
-  .no-js .title-bar {
-    display: none;
+  @media screen and (max-width: 1020px) {
+    top: 0;
+    right: 0;
+    text-align: center;
   }
 }
 
