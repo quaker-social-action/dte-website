@@ -10,8 +10,8 @@ $(function(selectedOptions){
     // TODO: change this for a class
     $activeSwitch.css('left', '0%');
 
-    selectedOptions.set('burial', false);
-    selectedOptions.set('cremation', true);
+    selectedOptions.set('burial', true);
+    selectedOptions.set('cremation', false);
   }
 
   function switchRight(){
@@ -21,8 +21,8 @@ $(function(selectedOptions){
     // don't change styles inline
     $activeSwitch.css('left', '50%');
 
-    selectedOptions.set('cremation', false);
-    selectedOptions.set('burial', true);
+    selectedOptions.set('cremation', true);
+    selectedOptions.set('burial', false);
   }
 
   $switchBtnLeft.click(switchLeft);
