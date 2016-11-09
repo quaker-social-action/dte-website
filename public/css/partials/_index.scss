@@ -52,24 +52,14 @@
 #landingpage-first-half {
   z-index: 99;
   text-align: center;
-
+  height: 55%;
 }
 
 #landingpage-second-half {
   background-color: white;
   text-align: center;
+  height: 45%;
 }
-
-@media screen and (min-width: 64em) {
-  #landingpage-first-half {
-    height: 60%;
-  }
-
-  #landingpage-second-half {
-    height: 40%;
-  }
-}
-
 
 .text-half {
   padding-top: 30px;
@@ -83,9 +73,13 @@
 }
 
 .landing-info {
-  padding: 100px;
+  padding: 80px;
   display: block;
   text-align: center;
+
+  @media screen and (max-width: 700px) {
+    padding: 50px;
+  }
 }
 
 .landing-text {
