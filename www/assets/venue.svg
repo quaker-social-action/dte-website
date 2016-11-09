@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="venue" width="133px" height="106px" viewBox="0 0 133 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>venue</title>
+    <defs>
+        <polyline id="path-1" points="65.9232155 48.764893 0.820620939 48.764893 0.820620939 40.7775398 0.820620939 40.7775398 65.9232155 40.7775398"></polyline>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="65.1025945" height="7.98735316" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polyline id="path-3" points="65.9232155 20.8091569 48.963716 20.8091569 48.963716 13.4523843 48.963716 13.4523843 65.9232155 13.4523843"></polyline>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.9594994" height="7.35677265" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="1.91478219" y="67.4721149" width="15.3182575" height="3.15290256" rx="1.57645128"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.3182575" height="3.15290256" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="33.6454585" y="67.4721149" width="15.3182575" height="3.15290256" rx="1.57645128"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.3182575" height="3.15290256" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <polyline id="path-9" points="65.9232155 104.886559 0 104.886559 0 88.9118523 0 88.9118523 65.9232155 88.9118523"></polyline>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="65.9232155" height="15.9747063" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <polyline id="path-11" points="65.9232155 48.764893 0.820620939 48.764893 0.820620939 40.7775398 0.820620939 40.7775398 65.9232155 40.7775398"></polyline>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="65.1025945" height="7.98735316" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <polyline id="path-13" points="65.9232155 20.8091569 48.963716 20.8091569 48.963716 13.4523843 48.963716 13.4523843 65.9232155 13.4523843"></polyline>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.9594994" height="7.35677265" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <rect id="path-15" x="1.91478219" y="67.4721149" width="15.3182575" height="3.15290256" rx="1.57645128"></rect>
+        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.3182575" height="3.15290256" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <rect id="path-17" x="33.6454585" y="67.4721149" width="15.3182575" height="3.15290256" rx="1.57645128"></rect>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.3182575" height="3.15290256" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+        <polyline id="path-19" points="65.9232155 104.886559 -2.20268248e-13 104.886559 -2.20268248e-13 88.9118523 -2.20268248e-13 88.9118523 65.9232155 88.9118523"></polyline>
+        <mask id="mask-20" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="65.9232155" height="15.9747063" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="venue" transform="translate(1.000000, 1.000000)" stroke="#7C2EA4">
+            <g id="left">
+                <path d="M4.57287037,70.0995337 L4.57287037,88.596562" id="Line" stroke-linecap="square"></path>
+                <path d="M8.81824074,48.6597962 L8.81824074,67.1568246" id="Line" stroke-linecap="square"></path>
+                <use id="Rectangle-1" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <polyline id="Triangle-1" points="65.9232155 13.6625778 44.3135307 13.6625778 65.9197294 0.0881183401"></polyline>
+                <path d="M1.50447172,40.8826366 L49.1004862,20.7040602" id="Line" stroke-linecap="square"></path>
+                <use id="Rectangle-1" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+                <path d="M40.9617593,48.8699897 L40.9617593,67.3670181" id="Line" stroke-linecap="square"></path>
+                <use id="Rectangle-1" mask="url(#mask-6)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-5"></use>
+                <use id="Rectangle-1" mask="url(#mask-8)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-7"></use>
+                <path d="M13.6700926,70.0995337 L13.6700926,88.596562" id="Line" stroke-linecap="square"></path>
+                <path d="M36.1099074,70.7301142 L36.1099074,89.2271426" id="Line" stroke-linecap="square"></path>
+                <path d="M45.2071296,70.7301142 L45.2071296,89.2271426" id="Line" stroke-linecap="square"></path>
+                <use id="Rectangle-3" mask="url(#mask-10)" stroke-width="2" xlink:href="#path-9"></use>
+                <path d="M0.41031047,93.5833333 L65.7864453,93.5833333" id="Line" stroke-linecap="square"></path>
+                <path d="M0.41031047,99.65 L65.7864453,99.65" id="Line" stroke-linecap="square"></path>
+            </g>
+            <g id="right" transform="translate(97.966409, 52.500000) scale(-1, 1) translate(-97.966409, -52.500000) translate(64.966409, 0.000000)">
+                <path d="M4.57287037,70.0995337 L4.57287037,88.596562" id="Line" stroke-linecap="square"></path>
+                <path d="M8.81824074,48.6597962 L8.81824074,67.1568246" id="Line" stroke-linecap="square"></path>
+                <use id="Rectangle-1" mask="url(#mask-12)" stroke-width="2" xlink:href="#path-11"></use>
+                <polyline id="Triangle-1" points="65.9232155 13.6625778 44.3135307 13.6625778 65.915188 0.0909715247"></polyline>
+                <path d="M1.50447172,40.8826366 L49.1004862,20.7040602" id="Line" stroke-linecap="square"></path>
+                <use id="Rectangle-1" mask="url(#mask-14)" stroke-width="2" xlink:href="#path-13"></use>
+                <path d="M40.9617593,48.8699897 L40.9617593,67.3670181" id="Line" stroke-linecap="square"></path>
+                <use id="Rectangle-1" mask="url(#mask-16)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-15"></use>
+                <use id="Rectangle-1" mask="url(#mask-18)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-17"></use>
+                <path d="M13.6700926,70.0995337 L13.6700926,88.596562" id="Line" stroke-linecap="square"></path>
+                <path d="M36.1099074,70.7301142 L36.1099074,89.2271426" id="Line" stroke-linecap="square"></path>
+                <path d="M45.2071296,70.7301142 L45.2071296,89.2271426" id="Line" stroke-linecap="square"></path>
+                <use id="Rectangle-3" mask="url(#mask-20)" stroke-width="2" xlink:href="#path-19"></use>
+                <path d="M0.41031047,93.5833333 L65.7864453,93.5833333" id="Line" stroke-linecap="square"></path>
+                <path d="M0.41031047,99.65 L65.7864453,99.65" id="Line" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>
