@@ -100,18 +100,19 @@
 .switch-wrapper {
   position: relative;
   display: inline-block;
-  width: 0px;
+  width: 100%;
   top: 20px;
   height: 84px;
+
+  font-size: .5em;
 }
 
 .switch-button {
-  width: 400px;
+  width: 280px;
+  margin: 0 auto;
   height: 40px;
   position: relative;
   display: inline-block;
-  -webkit-transform: translate3D(-50%, -50%, 0);
-          transform: translate3D(-50%, -50%, 0);
   will-change: transform;
   z-index: 197 !important;
   cursor: pointer;
