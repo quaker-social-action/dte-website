@@ -18,7 +18,7 @@
 }
 
 .bare__header {
-  height: 40vh;
+  height: 40%;
   text-align: initial;
 }
 
@@ -34,7 +34,7 @@
   @media screen and (max-width: 700px) {
     font-size: 2em;
     text-align: center;
-    width: 400px;
+    width: 320px;
     margin-top: 10px;
 
   }
@@ -62,7 +62,7 @@
 }
 
 .bare__description {
-  font-size: .8em;
+  font-size: 15px;
   height: inherit;
   padding: 20px;
   border-bottom: 4px solid rgb(228, 96, 0);
@@ -75,8 +75,4 @@
     box-sizing: border-box;
     height: 61%;
   }
-}
-
-.userStory {
-  margin-bottom: 35px;
 }

@@ -5,18 +5,6 @@
   height: 70px;
 }
 
-.header-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 10px;
-  height: 70px;
-  width: 70px;
-
-  @media screen and (max-width: 600px) {
-    display: none;
-  }
-}
 
 .navbar {
   height: 20px;
@@ -87,6 +75,7 @@
 }
 
 .landing-text {
+  height: 170px;
   margin: 0.5em;
   color: white;
   font-size: 3em;

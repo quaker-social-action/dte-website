@@ -110,13 +110,15 @@ $(function(window, Observable){
   $('#fullpage').fullpage({
     menu: '.fixed-header',
     lockAnchors: false,
-    anchors:['home', 'options_page'],
+    anchors: ['home', 'first', 'second', 'third', 'fourth', 'fifth'],
     recordHistory: false,
     fixedElements: '.navbar',
     paddingTop: '0',
     paddingBottom: '0',
     responsiveWidth: '1050',
-    animateAnchor: false,
+    navigation: true,
+    navigationPosition: 'right',
+    showActiveTooltip: true,
   });
 
   // Default selected options
