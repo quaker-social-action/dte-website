@@ -109,7 +109,7 @@ background-color: $light-pink-bg;
 .purpleBox {
   padding: 30px;
   display: block;
-  height: 230px;
+  height: 235px;
   margin-bottom: 20px;
   border: 1px solid #7C2EA4;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.24), 0px 0px 2px 0px rgba(0,0,0,0.12);
@@ -138,6 +138,9 @@ background-color: $light-pink-bg;
   font-family: 'Lato';
   font-size: 12px;
   color: #7C2EA4;
+  @media screen and (max-width: 600px) {
+    font-size: 11px;
+  }
 }
 
 #addMore {

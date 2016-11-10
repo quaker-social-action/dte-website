@@ -12,6 +12,10 @@
   margin: 10px;
   height: 70px;
   width: 70px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .navbar {
@@ -86,6 +90,10 @@
   margin: 0.5em;
   color: white;
   font-size: 3em;
+
+  @media screen and (max-width: 700px) {
+    font-size: 2em;
+  }
 }
 
 .landing-paragraph {
@@ -95,4 +103,14 @@
 
 .arr-landing {
   padding-top: 10px;
+}
+
+.separator {
+  border: none;
+
+  @media screen and (max-width: 900px) {
+    border-bottom: 1px solid $arrow;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 }
