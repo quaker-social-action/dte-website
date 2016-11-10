@@ -12,6 +12,10 @@
   margin: 10px;
   height: 70px;
   width: 70px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .navbar {
@@ -52,24 +56,14 @@
 #landingpage-first-half {
   z-index: 99;
   text-align: center;
-
+  height: 55%;
 }
 
 #landingpage-second-half {
   background-color: white;
   text-align: center;
+  height: 45%;
 }
-
-@media screen and (min-width: 64em) {
-  #landingpage-first-half {
-    height: 60%;
-  }
-
-  #landingpage-second-half {
-    height: 40%;
-  }
-}
-
 
 .text-half {
   padding-top: 30px;
@@ -83,15 +77,23 @@
 }
 
 .landing-info {
-  padding: 100px;
+  padding: 80px;
   display: block;
   text-align: center;
+
+  @media screen and (max-width: 700px) {
+    padding: 50px;
+  }
 }
 
 .landing-text {
   margin: 0.5em;
   color: white;
   font-size: 3em;
+
+  @media screen and (max-width: 700px) {
+    font-size: 2em;
+  }
 }
 
 .landing-paragraph {
@@ -101,4 +103,14 @@
 
 .arr-landing {
   padding-top: 10px;
+}
+
+.separator {
+  border: none;
+
+  @media screen and (max-width: 900px) {
+    border-bottom: 1px solid $arrow;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 }

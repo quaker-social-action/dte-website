@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="catering" width="137px" height="84px" viewBox="0 0 137 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>catering</title>
+    <defs>
+        <rect id="path-1" x="0" y="75.5643774" width="136.932951" height="7.17538058" rx="3.58769029"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="136.932951" height="7.17538058" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="catering" transform="translate(0.000000, 1.000000)" stroke="#7C2EA4">
+            <path d="M75.9781659,7.08416038 C75.9781659,3.17168664 72.4961534,0 68.2008734,0 C63.9055933,0 60.4235808,3.17168664 60.4235808,7.08416038" id="Oval-2"></path>
+            <path d="M129.222707,70.8416038 C129.222707,35.3033006 101.902302,6.49381368 68.2008734,6.49381368 C34.499445,6.49381368 7.1790393,35.3033006 7.1790393,70.8416038 L129.222707,70.8416038 Z" id="Oval"></path>
+            <use id="Rectangle-1" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

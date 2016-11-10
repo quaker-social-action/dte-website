@@ -34,7 +34,7 @@
 .map-page-header {
   background-color: $purple-header;
   text-align: center;
-  height: 30vh;
+  height: 30%;
   color: white;
 }
 
@@ -91,7 +91,10 @@
   }
 }
 .title-map {
-  margin-top: 60px;
+  padding-top: 30px;
+}
+.title-p {
+  padding-bottom: 30px;
 }
 
 .switch-wrapper {
@@ -152,8 +155,4 @@
 }
 .switch-button .active-case {
   color: #674A7F;
-}
-
-.arrow-map {
-  bottom: 10px;
 }

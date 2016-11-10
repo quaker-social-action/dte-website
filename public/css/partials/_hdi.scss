@@ -9,6 +9,10 @@
 
 .hdi-wrapper {
   padding: 50px;
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
 }
 
 .hdi-card-wrapper {
