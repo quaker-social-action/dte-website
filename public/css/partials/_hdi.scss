@@ -27,6 +27,9 @@
   height: 85%;
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
   border-radius: 2px;
+  @media screen and (max-width: 600px) {
+    padding: 1em;
+  }
 }
 
 .hdi-number {
@@ -42,6 +45,9 @@
   clear: left;
   font-size: 14px;
   padding-bottom: 2em;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 }
 
 .hdi-card {
