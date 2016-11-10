@@ -210,20 +210,3 @@ $(function(window, Observable){
 
   window.selectedOptions = selectedOptions;
 }(window, window.Observable));
-
-
-
-  // $('#fullpage').fullpage({
-  //   // anchors:['home', 'first', 'second', 'third', 'fourth'],
-  //   onLeave: function(index, nextIndex, direction) {
-  //     var leavingSection = $(this);
-  //
-  //     if(index == 1 && direction =='down') {
-  //       console.log('bla');
-  //       // TweenMax.to('.navbar', 0.5, {css:{color: 'red', opacity: 0.5}});
-  //     } else if(index === 2 && direction === 'up') {
-  //       console.log('ya!');
-  //       // TweenMax.to('.navbar', 0.5, {css:{color: 'blue', opacity: 1}});
-  //     }
-  //   }
-  // });
