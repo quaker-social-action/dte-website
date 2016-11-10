@@ -1,3 +1,6 @@
+
+
+
 $(function(window, Observable){
   var regionOptions = {
     Wales: {
@@ -117,6 +120,26 @@ $(function(window, Observable){
     navigation: true,
     navigationPosition: 'right',
     showActiveTooltip: true,
+
+    onLeave: function(index, nextIndex, direction) {
+      var leavingSection = $(this);
+
+      if(index == 1 && direction =='down') {
+        $(".fixed-header-links").css("color","#9C6FC7")
+      } else if(index === 2 && direction === 'down') {
+        $(".fixed-header-links").css("color","#9C6FC7")
+      } else if(index === 2 && direction === 'up') {
+        $(".fixed-header-links").css("color","#D9BCE0")
+      } else if(index === 3 && direction === 'down') {
+        $(".fixed-header-links").css("color","#4D215D")
+      } else if(index === 4 && direction === 'up') {
+        $(".fixed-header-links").css("color","#9C6FC7")
+      } else if(index === 4 && direction === 'down') {
+        $(".fixed-header-links").css("color","#4D215D")
+      } else if(index === 5 && direction === 'up') {
+        $(".fixed-header-links").css("color","#9C6FC7")
+      }
+    }
   });
 
   // Default selected options
@@ -187,3 +210,20 @@ $(function(window, Observable){
 
   window.selectedOptions = selectedOptions;
 }(window, window.Observable));
+
+
+
+  // $('#fullpage').fullpage({
+  //   // anchors:['home', 'first', 'second', 'third', 'fourth'],
+  //   onLeave: function(index, nextIndex, direction) {
+  //     var leavingSection = $(this);
+  //
+  //     if(index == 1 && direction =='down') {
+  //       console.log('bla');
+  //       // TweenMax.to('.navbar', 0.5, {css:{color: 'red', opacity: 0.5}});
+  //     } else if(index === 2 && direction === 'up') {
+  //       console.log('ya!');
+  //       // TweenMax.to('.navbar', 0.5, {css:{color: 'blue', opacity: 1}});
+  //     }
+  //   }
+  // });
