@@ -144,3 +144,18 @@ font-weight: bold;
 .fp-tableCell {
   display: block;
 }
+
+
+@media screen and (max-width: 600px) {
+
+  .fp-tableCell {
+    padding-top: 100px;
+    display: table-cell;
+  }
+  .social-media {
+    height: 70%;
+  }
+  .widgets {
+    padding-top: 50px;
+  }
+}
