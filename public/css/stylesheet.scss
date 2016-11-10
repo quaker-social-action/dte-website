@@ -14,7 +14,8 @@ ul {
 }
 
 body {
-  overflow: hidden;
+padding: 0!important;
+ overflow: hidden;
   font-family: $roboto;
   font-weight: 300;
 }
@@ -149,7 +150,7 @@ h3 {
 @media screen and (max-width: 600px) {
 
   .fp-tableCell {
-    display: table-cell;
+    // display: table-cell;
     text-align: center;
   }
   .social-media {

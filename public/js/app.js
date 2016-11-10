@@ -113,8 +113,6 @@ $(function(window, Observable){
     anchors: ['home', 'first', 'second', 'third', 'fourth', 'fifth'],
     recordHistory: false,
     fixedElements: '.navbar',
-    paddingTop: '0',
-    paddingBottom: '0',
     responsiveWidth: '1050',
     navigation: true,
     navigationPosition: 'right',
