@@ -182,7 +182,6 @@ h3 {
 // Helpers
 .hidden {
   background-color: transparent;
-  // display: none;
 }
 .hide {
   visibility: hidden;
@@ -194,11 +193,6 @@ h3 {
 
 
 @media screen and (max-width: 600px) {
-
-  .fp-tableCell {
-    // display: table-cell;
-    text-align: center;
-  }
   .social-media {
     height: 70%;
   }
