@@ -1,3 +1,6 @@
+
+
+
 $(function(window, Observable){
   var regionOptions = {
     Wales: {
@@ -113,12 +116,30 @@ $(function(window, Observable){
     anchors: ['home', 'first', 'second', 'third', 'fourth', 'fifth'],
     recordHistory: false,
     fixedElements: '.navbar',
-    paddingTop: '0',
-    paddingBottom: '0',
     responsiveWidth: '1050',
     navigation: true,
     navigationPosition: 'right',
     showActiveTooltip: true,
+
+    onLeave: function(index, nextIndex, direction) {
+      var leavingSection = $(this);
+
+      if(index == 1 && direction =='down') {
+        $(".fixed-header-links").css("color","#9C6FC7")
+      } else if(index === 2 && direction === 'down') {
+        $(".fixed-header-links").css("color","#9C6FC7")
+      } else if(index === 2 && direction === 'up') {
+        $(".fixed-header-links").css("color","#D9BCE0")
+      } else if(index === 3 && direction === 'down') {
+        $(".fixed-header-links").css("color","#4D215D")
+      } else if(index === 4 && direction === 'up') {
+        $(".fixed-header-links").css("color","#9C6FC7")
+      } else if(index === 4 && direction === 'down') {
+        $(".fixed-header-links").css("color","#4D215D")
+      } else if(index === 5 && direction === 'up') {
+        $(".fixed-header-links").css("color","#9C6FC7")
+      }
+    }
   });
 
   // Default selected options

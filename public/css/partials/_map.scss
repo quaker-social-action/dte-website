@@ -103,12 +103,10 @@
   width: 100%;
   top: 20px;
   height: 84px;
-
-  font-size: .5em;
 }
 
 .switch-button {
-  width: 280px;
+  width: 366px;
   margin: 0 auto;
   height: 40px;
   position: relative;
@@ -121,6 +119,7 @@
   border: 1px solid white;
   color: #674A7F;
 }
+
 .switch-button-case {
   display: inline-block;
   background: none;
@@ -135,6 +134,7 @@
   letter-spacing: 5px;
   padding-bottom: 1px;
 }
+
 .switch-button-case:hover {
   color: grey;
   cursor: pointer;
