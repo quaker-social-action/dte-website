@@ -1,3 +1,6 @@
+
+
+
 $(function(window, Observable){
   var regionOptions = {
     Wales: {
@@ -107,19 +110,37 @@ $(function(window, Observable){
   $(document).foundation();
 
 
-  $('#fullpage').fullpage({
-    menu: '.fixed-header',
-    lockAnchors: false,
-    anchors: ['home', 'first', 'second', 'third', 'fourth', 'fifth'],
-    recordHistory: false,
-    fixedElements: '.navbar',
-    paddingTop: '0',
-    paddingBottom: '0',
-    responsiveWidth: '1050',
-    navigation: true,
-    navigationPosition: 'right',
-    showActiveTooltip: true,
-  });
+  if (window.innerWidth > 600) {
+    $('#fullpage').fullpage({
+      menu: '.fixed-header',
+      lockAnchors: false,
+      anchors: ['home', 'first', 'second', 'third', 'fourth', 'fifth'],
+      recordHistory: false,
+      fixedElements: '.navbar',
+      responsiveWidth: '1050',
+      navigation: true,
+      navigationPosition: 'right',
+      showActiveTooltip: true,
+
+      onLeave: function(index, nextIndex, direction) {
+        if(index == 1 && direction =='down') {
+          $('.fixed-header-links').css('color','#9C6FC7');
+        } else if(index === 2 && direction === 'down') {
+          $('.fixed-header-links').css('color','#9C6FC7');
+        } else if(index === 2 && direction === 'up') {
+          $('.fixed-header-links').css('color','#D9BCE0');
+        } else if(index === 3 && direction === 'down') {
+          $('.fixed-header-links').css('color','#4D215D');
+        } else if(index === 4 && direction === 'up') {
+          $('.fixed-header-links').css('color','#9C6FC7');
+        } else if(index === 4 && direction === 'down') {
+          $('.fixed-header-links').css('color','#4D215D');
+        } else if(index === 5 && direction === 'up') {
+          $('.fixed-header-links').css('color','#9C6FC7');
+        }
+      }
+    });
+  }
 
   // Default selected options
   var selectedOptions = new Observable({
