@@ -1,6 +1,3 @@
-
-
-
 $(function(window, Observable){
   var regionOptions = {
     Wales: {
