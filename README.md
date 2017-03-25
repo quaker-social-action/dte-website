@@ -15,3 +15,9 @@ If you want to contribute:
 3. ``` npm install ```
 4. ``` harp server --port 9000``` (you can change this to any port you like)
 5. Before you commit ```harp compile```
+
+
+To run the css(scss) file, you need to:
+1. ``` cd public/css ```
+2. ``` sass --watch stylesheet.scss:stylesheet.css ```
+
