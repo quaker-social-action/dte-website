@@ -21,8 +21,8 @@ $(function(window, Observable){
       limousine: 252
     },
     'London': {
-      cremation: 4263,
-      burial: 6974,
+      cremation: 4591,
+      burial: 7311,
       ordersheet: 76,
       notice: 84,
       flowers: 171,
@@ -31,8 +31,8 @@ $(function(window, Observable){
       limousine: 282
     },
     'the Midlands': {
-      cremation: 3377,
-      burial: 4594,
+      cremation: 3245,
+      burial: 5022,
       ordersheet: 84,
       notice: 53,
       flowers: 159,
@@ -41,8 +41,8 @@ $(function(window, Observable){
       limousine: 220
     },
     Yorkshire: {
-      cremation: 3526,
-      burial: 4594,
+      cremation: 3774,
+      burial: 4596,
       ordersheet: 75,
       notice: 64,
       flowers: 135,
@@ -51,8 +51,8 @@ $(function(window, Observable){
       limousine: 357
     },
     Scotland: {
-      cremation: 3322,
-      burial: 4383,
+      cremation: 3146,
+      burial: 4056,
       ordersheet: 74,
       notice: 73,
       flowers: 166,
@@ -61,8 +61,8 @@ $(function(window, Observable){
       limousine: 197
     },
     'the South West': {
-      cremation: 3749,
-      burial: 4556,
+      cremation: 4117,
+      burial: 4709,
       ordersheet: 65,
       notice: 70,
       flowers: 147,
@@ -71,7 +71,7 @@ $(function(window, Observable){
       limousine: 268
     },
     'the North': {
-      cremation: 3362,
+      cremation: 3142,
       burial: 4305,
       ordersheet: 54,
       notice: 63,
@@ -81,8 +81,8 @@ $(function(window, Observable){
       limousine: 168
     },
     'Northern Ireland': {
-      cremation: 3281,
-      burial: 3524,
+      cremation: 2070,
+      burial: 2895,
       ordersheet: 73,
       notice: 76,
       flowers: 153,
